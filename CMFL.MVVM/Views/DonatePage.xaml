@@ -1,0 +1,45 @@
+﻿<Page x:Class="CMFL.MVVM.Views.DonatePage"
+      TextElement.Foreground="{DynamicResource SystemGray6}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CMFL.MVVM.Views"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" DataContext="{Binding DonatePageViewModel, Source={StaticResource Locator}}"
+      d:DesignHeight="518" d:DesignWidth="730">
+    <Grid Background="{StaticResource SystemOpacityBlack3}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="23*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0">
+            <materialDesign:PackIcon Kind="Donate" Width="35" Height="35" VerticalAlignment="Center"
+                                     Foreground="{DynamicResource SystemOrange1}" />
+            <TextBlock FontSize="24" Padding="10" Text="{DynamicResource DonateAndSupport}" />
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Margin="10,0,0,0">
+                <TextBlock Padding="10" TextTrimming="CharacterEllipsis" TextWrapping="Wrap"
+                           Text="{DynamicResource DonateReason}" />
+                <TextBlock Padding="10" FontSize="16" Text="{DynamicResource CostDetail}" />
+                <TextBlock Padding="10" Margin="10,0,0,0" Text="{DynamicResource CostDetail1}" />
+                <TextBlock Padding="10" Margin="10,0,0,0" Text="{DynamicResource CostDetail2}" />
+                <TextBlock Padding="10" Margin="10,0,0,0" Text="{DynamicResource CostDetail3}" />
+                <TextBlock Padding="10" Margin="10,0,0,0" Text="{DynamicResource CostDetail4}" />
+
+                <TextBlock Padding="10" FontSize="16" Text="{DynamicResource DonateMethods}" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Image Source="/CMFL.MVVM;component/Assets/Images/Pay_Alipay.JPG" Width="160" />
+                    <Image Source="/CMFL.MVVM;component/Assets/Images/Pay_Wechat.JPG" Width="145" Margin="50,0,0,0" />
+                </StackPanel>
+                <Button HorizontalAlignment="Center" Height="Auto" Width="355" Margin="0,30,0,50"
+                        Content="{DynamicResource UseAfd}"
+                        Background="{DynamicResource SystemBlue1}" BorderBrush="{DynamicResource SystemBlue1}"
+                        Command="{Binding GoToAfdWebsiteCommand}" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

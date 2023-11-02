@@ -1,0 +1,80 @@
+﻿<Page x:Class="CMFL.MVVM.Views.IntroPage4"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CMFL.MVVM.Views"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:controls="clr-namespace:Heyo.Controls;assembly=Heyo"
+      mc:Ignorable="d"
+      d:DesignHeight="518" d:DesignWidth="730"
+      DataContext="{Binding IntroPage4ViewModel,Source={StaticResource Locator}}">
+    <Page.Resources>
+        <Storyboard x:Key="GridOpacityRaise">
+            <DoubleAnimation
+                From="0" To="1"
+                SpeedRatio="1.5"
+                Storyboard.TargetName="MainGrid"
+                Storyboard.TargetProperty="Opacity" />
+        </Storyboard>
+    </Page.Resources>
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="76*" />
+            <RowDefinition Height="51*" />
+            <RowDefinition Height="144*" />
+            <RowDefinition Height="258*" />
+        </Grid.RowDefinitions>
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="Grid.Loaded">
+                <BeginStoryboard Storyboard="{DynamicResource GridOpacityRaise}" />
+            </EventTrigger>
+        </Grid.Triggers>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="22*" />
+                <ColumnDefinition Width="60*" />
+                <ColumnDefinition Width="537*" />
+            </Grid.ColumnDefinitions>
+            <materialDesign:PackIcon Margin="5" Kind="Codepen" Foreground="#FFE45B5B" Padding="5" Grid.Column="1"
+                                     Height="Auto" Width="Auto" VerticalAlignment="Stretch"
+                                     HorizontalAlignment="Stretch" />
+            <TextBlock Foreground="White" FontSize="18" Padding="5" Grid.Column="2"
+                       VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Text="{DynamicResource VersionInsulationSetting}" />
+        </Grid>
+        <TextBlock Grid.Row="1" Margin="10,0,0,0" Padding="5" Foreground="White" TextWrapping="Wrap">
+            <Run Text="{DynamicResource VersionInsulationModeDescription}" />
+            <Run Text="{DynamicResource VersionInsulationModeDescriptionHighlight}" Foreground="#FFFFC500" />
+            <Run Text="{DynamicResource VersionInsulationModeDescription2}" />
+        </TextBlock>
+        <controls:MaterialCard HorizontalAlignment="Center" Grid.Row="2" WaveFeedback="False"
+                               VerticalAlignment="Center" MouseEnterAnimation="False" Padding="5"
+                               Background="#33FFFFFF" Height="40">
+            <StackPanel Orientation="Horizontal" Width="480" VerticalAlignment="Center">
+                <materialDesign:PackIcon Kind="Codepen" Foreground="White" Width="30" Height="30"
+                                         HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10" />
+                <TextBlock Text="{DynamicResource VersionInsulationSetting}" HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           FontSize="15"
+                           Foreground="White" />
+                <ToggleButton
+                    IsChecked="{Binding EnableVersionInsulation, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Margin="330,0,0,0" />
+            </StackPanel>
+        </controls:MaterialCard>
+        <Button Grid.Row="3" Background="#4CFFFFFF" BorderBrush="{x:Null}" Height="43"
+                Command="{Binding GoToNextCommand}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="246,0"
+                Width="127">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Padding="5"
+                           Text="{DynamicResource NextStep}" />
+                <materialDesign:PackIcon Kind="ArrowRightBoldCircleOutline" VerticalAlignment="Center"
+                                         HorizontalAlignment="Center" Width="25" Height="25" Padding="5" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</Page>

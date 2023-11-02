@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CA1065: 不要在意外的位置引发异常
+dotnet_diagnostic.CA1065.severity = silent

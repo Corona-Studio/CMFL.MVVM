@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="CMFL.MVVM.Controls.ImageBoxPlus"
+             TextElement.Foreground="{StaticResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" Loaded="ImageBoxPlus_OnLoaded"
+             d:DesignHeight="200" d:DesignWidth="500">
+    <Border CornerRadius="5" Background="White" ClipToBounds="True">
+        <Border.Triggers>
+            <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard TargetName="MainImageBlur" TargetProperty="Radius">
+                        <DoubleAnimation From="0" To="20" SpeedRatio="7" />
+                    </Storyboard>
+                </BeginStoryboard>
+                <BeginStoryboard>
+                    <Storyboard TargetName="GoToLinkButton" TargetProperty="Margin">
+                        <ThicknessAnimationUsingKeyFrames>
+                            <EasingThicknessKeyFrame KeyTime="0" Value="0,0,0,-50">
+                                <EasingThicknessKeyFrame.EasingFunction>
+                                    <PowerEase EasingMode="EaseOut" Power="6" />
+                                </EasingThicknessKeyFrame.EasingFunction>
+                            </EasingThicknessKeyFrame>
+                            <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="0,0,0,0">
+                                <EasingThicknessKeyFrame.EasingFunction>
+                                    <PowerEase EasingMode="EaseOut" Power="6" />
+                                </EasingThicknessKeyFrame.EasingFunction>
+                            </EasingThicknessKeyFrame>
+                        </ThicknessAnimationUsingKeyFrames>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard TargetName="MainImageBlur" TargetProperty="Radius">
+                        <DoubleAnimation From="20" To="0" SpeedRatio="7" />
+                    </Storyboard>
+                </BeginStoryboard>
+                <BeginStoryboard>
+                    <Storyboard TargetName="GoToLinkButton" TargetProperty="Margin">
+                        <ThicknessAnimationUsingKeyFrames>
+                            <EasingThicknessKeyFrame KeyTime="0" Value="0,0,0,0">
+                                <EasingThicknessKeyFrame.EasingFunction>
+                                    <PowerEase EasingMode="EaseOut" Power="6" />
+                                </EasingThicknessKeyFrame.EasingFunction>
+                            </EasingThicknessKeyFrame>
+                            <EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="0,0,0,-50">
+                                <EasingThicknessKeyFrame.EasingFunction>
+                                    <PowerEase EasingMode="EaseOut" Power="6" />
+                                </EasingThicknessKeyFrame.EasingFunction>
+                            </EasingThicknessKeyFrame>
+                        </ThicknessAnimationUsingKeyFrames>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Border.Triggers>
+        <Grid>
+            <Grid>
+                <Image x:Name="ImageBg" Stretch="UniformToFill">
+                    <Image.Effect>
+                        <BlurEffect Radius="20" />
+                    </Image.Effect>
+                </Image>
+                <Image x:Name="ImageMain">
+                    <Image.Effect>
+                        <BlurEffect x:Name="MainImageBlur" Radius="0" />
+                    </Image.Effect>
+                </Image>
+                <StackPanel x:Name="LoadingPanel" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}"
+                                 Value="0"
+                                 IsIndeterminate="True" Foreground="#f44336" Width="30" Height="30" />
+                    <Button x:Name="ReloadButton" Click="ReloadButton_OnClick" Visibility="Collapsed"
+                            Background="#FFF44336" BorderBrush="#FFF44336" Width="100" Margin="0,10,0,0" Content="重新加载" />
+                </StackPanel>
+            </Grid>
+            <Button x:Name="GoToLinkButton" Click="GoToLink" Background="#7FFFFFFF" Height="37"
+                    Padding="0" BorderBrush="#7FFFFFFF" VerticalAlignment="Bottom" Margin="0,0,0,-37">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="TitleText" Padding="6" VerticalAlignment="Center" HorizontalAlignment="Center"
+                               Foreground="#DD000000" Text="" FontSize="16"
+                               TextTrimming="CharacterEllipsis" />
+                    <materialDesign:PackIcon Kind="ArrowRightBold" Foreground="#DD000000" VerticalAlignment="Center"
+                                             HorizontalAlignment="Center" Width="20" Height="20" />
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,62 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="SystemBlue1" Color="#007AFF" />
+    <SolidColorBrush x:Key="SystemBlue2" Color="#2196F3" />
+    <SolidColorBrush x:Key="SystemBlue3" Color="#42A5F5" />
+
+    <SolidColorBrush x:Key="SystemCyan1" Color="#00BCD4" />
+    <SolidColorBrush x:Key="SystemCyan2" Color="#26C6DA" />
+    <SolidColorBrush x:Key="SystemCyan3" Color="#4DD0E1" />
+
+    <SolidColorBrush x:Key="SystemGreen1" Color="#34C759" />
+    <SolidColorBrush x:Key="SystemGreen2" Color="#66BB6A" />
+    <SolidColorBrush x:Key="SystemGreen3" Color="#81C784" />
+
+    <SolidColorBrush x:Key="SystemIndigo1" Color="#5856D6" />
+    <SolidColorBrush x:Key="SystemIndigo2" Color="#5C6BC0" />
+    <SolidColorBrush x:Key="SystemIndigo3" Color="#7986CB" />
+
+    <SolidColorBrush x:Key="SystemOrange1" Color="#FF9500" />
+    <SolidColorBrush x:Key="SystemOrange2" Color="#FFA726" />
+    <SolidColorBrush x:Key="SystemOrange3" Color="#FFB74D" />
+
+    <SolidColorBrush x:Key="SystemBrown1" Color="#795548" />
+    <SolidColorBrush x:Key="SystemBrown2" Color="#8D6E63" />
+    <SolidColorBrush x:Key="SystemBrown3" Color="#A1887F" />
+
+    <SolidColorBrush x:Key="SystemPink1" Color="#FF2D55" />
+    <SolidColorBrush x:Key="SystemPink2" Color="#EC407A" />
+    <SolidColorBrush x:Key="SystemPink3" Color="#F06292" />
+
+    <SolidColorBrush x:Key="SystemPurple1" Color="#9C27B0" />
+    <SolidColorBrush x:Key="SystemPurple2" Color="#AB47BC" />
+    <SolidColorBrush x:Key="SystemPurple3" Color="#BA68C8" />
+
+    <SolidColorBrush x:Key="SystemRed1" Color="#FF3B30" />
+    <SolidColorBrush x:Key="SystemRed2" Color="#EF5350" />
+    <SolidColorBrush x:Key="SystemRed3" Color="#E57373" />
+
+    <SolidColorBrush x:Key="SystemTeal1" Color="#00BFA5" />
+    <SolidColorBrush x:Key="SystemTeal2" Color="#1DE9B6" />
+    <SolidColorBrush x:Key="SystemTeal3" Color="#64FFDA" />
+
+    <SolidColorBrush x:Key="SystemYellow1" Color="#FFC107" />
+    <SolidColorBrush x:Key="SystemYellow2" Color="#FFCA28" />
+    <SolidColorBrush x:Key="SystemYellow3" Color="#FFD54F" />
+
+    <SolidColorBrush x:Key="SystemBlack1" Color="#212121" />
+    <SolidColorBrush x:Key="SystemBlack2" Color="#424242" />
+    <SolidColorBrush x:Key="SystemBlack3" Color="#616161" />
+
+    <SolidColorBrush x:Key="SystemGray1" Color="#8E8E93" />
+    <SolidColorBrush x:Key="SystemGray2" Color="#AEAEB2" />
+    <SolidColorBrush x:Key="SystemGray3" Color="#C7C7CC" />
+    <SolidColorBrush x:Key="SystemGray4" Color="#D1D1D6" />
+    <SolidColorBrush x:Key="SystemGray5" Color="#E5E5EA" />
+    <SolidColorBrush x:Key="SystemGray6" Color="#F2F2F7" />
+
+    <SolidColorBrush x:Key="PrimaryLabelColor" Color="#D8212121" />
+    <SolidColorBrush x:Key="SecondaryLabelColor" Color="#D8424242" />
+    <SolidColorBrush x:Key="TertiaryLabelColor" Color="#D8616161" />
+</ResourceDictionary>

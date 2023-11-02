@@ -1,0 +1,154 @@
+﻿<Page x:Class="CMFL.MVVM.Views.PlazaPage"
+      TextElement.Foreground="{StaticResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CMFL.MVVM.Views"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:controls="clr-namespace:CMFL.MVVM.Controls"
+      mc:Ignorable="d"
+      d:DesignHeight="518" d:DesignWidth="730"
+      DataContext="{Binding PlazaPageViewModel, Source={StaticResource Locator}}">
+    <Grid Background="#19000000">
+        <ScrollViewer
+            Visibility="{Binding ContentGridVisibility, Converter={StaticResource BooleanToVisibilityConverter}}"
+            Foreground="{x:Null}">
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Left" Padding="10">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Tree" Foreground="#FF00C853" Width="50" Height="50" />
+                        <TextBlock VerticalAlignment="Center" Foreground="#DDFFFFFF" FontSize="24"
+                                   Text="{DynamicResource PlazaWelcome}" />
+                    </StackPanel>
+                </TextBlock>
+                <controls:LeftRightImageBox Images="{Binding ImageUriList}" Width="500" Height="200" />
+                <TextBlock HorizontalAlignment="Left" Padding="10">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Newspaper" Foreground="#FF03A9F4" Width="35" Height="35" />
+                        <TextBlock VerticalAlignment="Center" Foreground="#DDFFFFFF" FontSize="20"
+                                   Text="{DynamicResource LauncherNews}" />
+                    </StackPanel>
+                </TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <ScrollViewer Width="350" Height="150" HorizontalAlignment="Left" Margin="30,0,0,0"
+                                  Background="#33000000">
+                        <ListView ItemsSource="{Binding News}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Record" VerticalAlignment="Center"
+                                                                 Foreground="#DDFFFFFF" />
+                                        <TextBlock Padding="5" Foreground="#DDFFFFFF" MaxWidth="300" MaxHeight="45"
+                                                   TextTrimming="CharacterEllipsis" TextWrapping="Wrap"
+                                                   Text="{Binding}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+                    <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
+                        <Button Width="180" Background="#ffab40" BorderBrush="#ffab40" Command="{Binding GoToMainSite}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Atom" VerticalAlignment="Center" />
+                                <TextBlock Padding="3" Text="{DynamicResource LauncherOfficialSite}" />
+                            </StackPanel>
+                        </Button>
+                        <Button Width="180" Background="#536dfe" BorderBrush="#536dfe" Command="{Binding GoToBilibili}"
+                                Margin="0,10,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Video" VerticalAlignment="Center" />
+                                <TextBlock Padding="3" Text="{DynamicResource LauncherPropagandaVideo}" />
+                            </StackPanel>
+                        </Button>
+                        <Button Width="180" Background="#00c853" BorderBrush="#00c853" Margin="0,10,0,0"
+                                Command="{Binding GoToMcBbs}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Web" VerticalAlignment="Center" />
+                                <TextBlock Padding="3" Text="{DynamicResource LauncherPost}" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+                <TextBlock HorizontalAlignment="Left" Padding="10">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="MessageImage" Foreground="#FFD4E157" Width="35" Height="35" />
+                        <TextBlock VerticalAlignment="Center" Foreground="#DDFFFFFF" FontSize="20"
+                                   Text="{DynamicResource ImageNews}" />
+                    </StackPanel>
+                </TextBlock>
+                <StackPanel Margin="0,10,0,0">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <controls:ImageBoxPlus Width="270" Title="提前预祝大家新年快乐！"
+                                               ImageUri="https://craftmine.fun/wp-content/uploads/2019/12/3_Small.png"
+                                               Height="150" />
+                        <controls:ImageBoxPlus Width="270" Title="加群以帮助我们提高!"
+                                               ImageUri="https://craftmine.fun/wp-content/uploads/2019/12/4_Small.png"
+                                               Height="150" Margin="10,0,0,0" />
+                    </StackPanel>
+                    <controls:ImageBoxPlus Width="550" Title="我们致力于做最实用的启动器！"
+                                           ImageUri="https://pic.afdiancdn.com/user/072d1a9298c411e8976352540025c377/common/1fb04176779ba442ded718c22b2c29fe_w1903_h520_s674.jpg?imageView2/1/w/1500/h/400"
+                                           Margin="0,10,0,0" Height="200" />
+                    <controls:ImageBoxPlus Width="550" Title="团队扩员啦！！！"
+                                           ImageUri="https://craftmine.fun/wp-content/uploads/2019/12/Img_Long_1.png"
+                                           Margin="0,10,0,0" Height="200" />
+                    <TextBlock HorizontalAlignment="Left" Padding="10">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Video" Foreground="#FFFF3D00" Width="35" Height="35" />
+                            <TextBlock VerticalAlignment="Center" Foreground="#DDFFFFFF" FontSize="20"
+                                       Text="{DynamicResource LauncherVideo}" />
+                        </StackPanel>
+                    </TextBlock>
+                    <controls:VideoPlayer Title="CMFL官方启动器宣传片" ExplainText="这个是我们官方发布的启动器宣传视频，快来看看吧！"
+                                          BgImageLink="https://i0.hdslb.com/bfs/archive/ce89cd055f63a34ebd45a0a5456fcacc290d7a02.jpg"
+                                          VideoSource="http://api.static.craftminefun.com:2536/Plaza/Videos/1.mp4"
+                                          Margin="0,10,0,0" Width="550" Height="300" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                        <controls:VideoPlayer Title="这个是一个测试视频" ExplainText="测试测试测试"
+                                              VideoSource="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+                                              Width="270" Height="150" />
+                        <controls:VideoPlayer Title="这个是一个测试视频" ExplainText="测试测试测试"
+                                              VideoSource="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+                                              Width="270" Height="150" Margin="10,0,0,0" />
+                    </StackPanel>
+                    <StackPanel Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Foreground="#DDFFFFFF" HorizontalAlignment="Center"
+                                   Text="{DynamicResource PlazaPageFootage1}" />
+                        <TextBlock Foreground="#DDFFFFFF" HorizontalAlignment="Center"
+                                   Text="{DynamicResource PlazaPageFootage2}" />
+                        <TextBlock Foreground="#DDFFFFFF" HorizontalAlignment="Center"
+                                   Text="{DynamicResource PlazaPageFootage3}" />
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Visibility="{Binding RequireLoginGridVisibility, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <materialDesign:PackIcon Kind="AccountAlert" Foreground="#FFF44336" Width="55" Height="55"
+                                     HorizontalAlignment="Center" />
+            <TextBlock Foreground="#DDFFFFFF" FontSize="24" HorizontalAlignment="Center"
+                       Text="{DynamicResource LoginRequired}" />
+            <TextBlock HorizontalAlignment="Center" Foreground="#DDFFFFFF" Padding="5"
+                       Text="{DynamicResource LoginRequiredDetail}" />
+        </StackPanel>
+        <Grid Visibility="{Binding LoadingGridVisibility, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <materialDesign:PackIcon Kind="Tree" Foreground="#FF00C853" Width="55" Height="55"
+                                         HorizontalAlignment="Center" />
+                <TextBlock Padding="5" Foreground="#DDFFFFFF" FontSize="24">
+                    <Run Text="CraftMineFun Plaza" />
+                </TextBlock>
+                <TextBlock Padding="5" Foreground="#DDFFFFFF" HorizontalAlignment="Center"
+                           Text="{DynamicResource PlazaLoadingText}" />
+                <ProgressBar
+                    IsIndeterminate="True"
+                    Style="{StaticResource MaterialDesignCircularProgressBar}"
+                    Foreground="#FF00E676" Width="35" Height="35" Margin="0,20,0,0" />
+            </StackPanel>
+            <TextBlock MaxWidth="550" TextTrimming="CharacterEllipsis" TextWrapping="Wrap" HorizontalAlignment="Center"
+                       VerticalAlignment="Bottom" Foreground="#DDFFFFFF" Text="{Binding LoadingMessage}" />
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,282 @@
+﻿<Window x:Class="CMFL.MVVM.WindowLogin"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CMFL.MVVM"
+        xmlns:xamlHelper="clr-namespace:CMFL.MVVM.Class.Helper.XamlHelper"
+        xmlns:controls="clr-namespace:Heyo.Controls;assembly=Heyo"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:validationRules="clr-namespace:CMFL.MVVM.Class.ValidationRules"
+        mc:Ignorable="d" WindowStyle="None" Background="{x:Null}" ResizeMode="NoResize"
+        DataContext="{Binding Path=LoginWindowViewModel, Source={StaticResource Locator}}"
+        AllowsTransparency="True" WindowStartupLocation="CenterScreen"
+        Height="615.862" Width="412" Icon="Assets/Images/logo.png">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="True" Margin="20">
+        <Grid.OpacityMask>
+            <VisualBrush Visual="{Binding ElementName=MaskBorder}" />
+        </Grid.OpacityMask>
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="20" ShadowDepth="0" Opacity="0.2" />
+        </Grid.Effect>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125*" />
+            <RowDefinition Height="163*" />
+        </Grid.RowDefinitions>
+        <Border x:Name="MaskBorder" Background="White" CornerRadius="5" />
+        <Border Background="#FFF4F4F5" HorizontalAlignment="Center" VerticalAlignment="Top"
+                MouseLeftButtonDown="CurrentWindowMove" UseLayoutRounding="True"
+                ClipToBounds="True" Grid.Row="1">
+            <controls:MoveAnimationPanel x:Name="BottomArea" To="0,0" MouseEnterAnimation="False" Margin="0"
+                                         HorizontalAlignment="Left" AnimationSpeed="1" VerticalAlignment="Bottom"
+                                         Height="326" Width="1805">
+                <StackPanel HorizontalAlignment="Left" Margin="0" Orientation="Horizontal">
+                    <Grid x:Name="LoginPanel" Width="361">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                    Margin="40,50,0,0">
+                            <materialDesign:PackIcon Kind="AccountBoxOutline" Height="28" Width="28" />
+                            <TextBlock Text="{DynamicResource UserName}" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                    Margin="40,150,0,0">
+                            <materialDesign:PackIcon Kind="Key" Margin="2,-1,0,0" Width="28" Height="28" />
+                            <TextBlock Text="{DynamicResource Password}" FontSize="18" />
+                        </StackPanel>
+                        <Button Style="{DynamicResource MaterialDesignRaisedButton}"
+                                Content="{DynamicResource Login}"
+                                HorizontalAlignment="Center"
+                                Visibility="{Binding ButtonLoginVisibility, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                VerticalAlignment="Bottom" Width="217" BorderBrush="{x:Null}"
+                                Background="#FFFD642A" Foreground="White" Height="38" Margin="72,0,72,42"
+                                FontWeight="Normal" FontSize="20"
+                                Command="{Binding LoginCommand}" HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center" ToolTip="{DynamicResource Login}" />
+                        <Button x:Name="ButtonRegister"
+                                Style="{DynamicResource MaterialDesignFloatingActionLightButton}"
+                                Margin="294,88,29,200" Background="#FFB8EE1F"
+                                BorderBrush="{x:Null}" Click="GoToRegister"
+                                ToolTip="{DynamicResource RegistrationButtonToolTip}" Width="Auto" Height="Auto">
+                            <materialDesign:PackIcon Kind="AccountPlus" Width="20" Height="20" Foreground="White" />
+                        </Button>
+                        <Button x:Name="ButtonCheckingUsernamePassword"
+                                Style="{DynamicResource MaterialDesignRaisedButton}" HorizontalAlignment="Center"
+                                VerticalAlignment="Bottom" Width="217" BorderBrush="{x:Null}"
+                                Background="#FFFD642A" Foreground="White" Height="38" Margin="72,0,72,42"
+                                FontWeight="Normal" FontSize="20"
+                                Visibility="Hidden">
+                            <ProgressBar
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                IsIndeterminate="True"
+                                Style="{DynamicResource MaterialDesignCircularProgressBar}"
+                                Value="0" Height="23" Width="23" Foreground="#FFFFE800" Background="{x:Null}"
+                                BorderBrush="{x:Null}" />
+                        </Button>
+                        <Button Click="GoToForgetPasswordPage"
+                                Style="{DynamicResource MaterialDesignFloatingActionLightButton}"
+                                Margin="294,188,29,100" Background="#FFEA7070"
+                                BorderBrush="{x:Null}" ToolTip="{DynamicResource ForgetButtonToolTip}" Width="Auto"
+                                Height="Auto">
+                            <materialDesign:PackIcon Kind="AccountAlert" Width="20" Height="20"
+                                                     Foreground="White" />
+                        </Button>
+                        <TextBox Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                                 Margin="44,79,82,207" Background="{x:Null}" BorderBrush="#FFFFB900"
+                                 CaretBrush="#FF00FF80" Foreground="#FF818181" FontSize="16"
+                                 materialDesign:HintAssist.Hint="Username"
+                                 Text="{Binding LoginUsername, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"
+                                 SelectionBrush="#FF8D8D8D" PreviewKeyUp="TextBoxUsername_PreviewKeyUp" MaxWidth="235"
+                                 MaxHeight="40" HorizontalAlignment="Center" VerticalAlignment="Center" Width="235" />
+                        <PasswordBox x:Name="LoginPasswordBox"
+                                     xamlHelper:PasswordBoxHelper.Attach="True"
+                                     xamlHelper:PasswordBoxHelper.Password="{Binding LoginPassword, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"
+                                     Style="{DynamicResource MaterialDesignFloatingHintPasswordBox}"
+                                     Margin="44,177,82,109" BorderBrush="#FFFFB900" Background="{x:Null}"
+                                     materialDesign:HintAssist.Hint="Password"
+                                     CaretBrush="#FF00FF80" Foreground="#FF818181" FontSize="16"
+                                     SelectionBrush="#FF8D8D8D" MaxWidth="235"
+                                     MaxHeight="40" HorizontalAlignment="Center" VerticalAlignment="Center" Width="235" />
+                        <CheckBox Style="{DynamicResource MaterialDesignCheckBox}"
+                                  Foreground="#FF686868"
+                                  IsChecked="{Binding RememberMe, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"
+                                  HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                  Content="{DynamicResource RememberMe}" Margin="0,0,0,10" />
+                    </Grid>
+                    <Grid x:Name="RegisterPanel" Width="361">
+                        <TextBox Style="{DynamicResource MaterialDesignTextBox}"
+                                 HorizontalAlignment="Center" Height="37"
+                                 TextWrapping="Wrap" VerticalAlignment="Top" Width="258" BorderBrush="#FF00A2FF"
+                                 Background="{x:Null}" Margin="52,42,50,0" Foreground="#FF575757"
+                                 FontSize="20" SelectionBrush="#FF8D8D8D"
+                                 CaretBrush="#FF1AF3C2">
+                            <TextBox.Text>
+                                <Binding Path="RegUsername" Mode="OneWayToSource" UpdateSourceTrigger="PropertyChanged"
+                                         ValidatesOnDataErrors="True">
+                                    <Binding.ValidationRules>
+                                        <validationRules:UsernameValidationRule ValidatesOnTargetUpdated="True" />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+                        <PasswordBox
+                            xamlHelper:PasswordBoxHelper.Attach="True"
+                            xamlHelper:PasswordBoxHelper.Password="{Binding RegPassword, Mode=OneWayToSource, UpdateSourceTrigger=LostFocus}"
+                            Style="{DynamicResource MaterialDesignPasswordBox}" HorizontalAlignment="Center"
+                            Height="37"
+                            Width="258" VerticalAlignment="Top" Foreground="#FF575757"
+                            FontSize="20" Background="{x:Null}"
+                            Margin="52,116,50,0" BorderBrush="#FF00A2FF" SelectionBrush="#FF8D8D8D"
+                            CaretBrush="#FF1AF3C2" />
+                        <TextBox Style="{DynamicResource MaterialDesignTextBox}"
+                                 HorizontalAlignment="Center" Height="37"
+                                 TextWrapping="Wrap" VerticalAlignment="Top" Width="258" BorderBrush="#FF00A2FF"
+                                 Background="{x:Null}" Foreground="#FF575757"
+                                 FontSize="20" Margin="52,191,50,0" CaretBrush="#FF1AF3C2">
+                            <TextBox.Text>
+                                <Binding Path="RegEmail" Mode="OneWayToSource" UpdateSourceTrigger="PropertyChanged"
+                                         ValidatesOnDataErrors="True">
+                                    <Binding.ValidationRules>
+                                        <validationRules:EmailValidationRule ValidatesOnTargetUpdated="False" />
+                                    </Binding.ValidationRules>
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+                        <Button Style="{DynamicResource MaterialDesignRaisedButton}"
+                                Content="{DynamicResource Cancel}"
+                                HorizontalAlignment="Left"
+                                Visibility="{Binding ButtonBackVisibility, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                Margin="285,251,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}"
+                                Background="{x:Null}" Foreground="#FF7C7C7C" FontWeight="Normal"
+                                FontSize="16" Click="BackToLogin" Height="39" />
+                        <TextBlock Text="{DynamicResource UserName}" HorizontalAlignment="Left" Margin="52,12,0,0"
+                                   VerticalAlignment="Top"
+                                   FontSize="16" Background="{x:Null}" Foreground="#FF0E0E0E" />
+                        <TextBlock Text="{DynamicResource Password}" HorizontalAlignment="Left" Margin="52,95,0,0"
+                                   VerticalAlignment="Top"
+                                   FontSize="16" Background="{x:Null}" Foreground="#FF0E0E0E" />
+                        <TextBlock Text="{DynamicResource Email}" HorizontalAlignment="Left" Margin="52,170,0,0"
+                                   VerticalAlignment="Top"
+                                   FontSize="16" Background="{x:Null}" Foreground="#FF0E0E0E" />
+                        <Button Style="{DynamicResource MaterialDesignRaisedButton}" HorizontalAlignment="Center"
+                                VerticalAlignment="Top" Width="210"
+                                BorderBrush="{x:Null}" Foreground="White" Background="#FF76CB19"
+                                Height="39" FontWeight="Normal"
+                                FontSize="20" Command="{Binding RegCommand}" Margin="75,251,75,0">
+                            <Grid>
+                                <TextBlock Text="{Binding RegButtonText}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center" />
+                            </Grid>
+                        </Button>
+                    </Grid>
+                    <Grid Width="361">
+                        <StackPanel>
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24"
+                                       Padding="20,20,0,0" Text="{DynamicResource ForgetPassword}" />
+                            <TextBlock Padding="20,5,20,0" TextWrapping="Wrap"
+                                       Text="{DynamicResource ForgetPasswordTip}" />
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+                            <TextBox materialDesign:HintAssist.Hint="{DynamicResource Email}"
+                                     Text="{Binding ForgotEmail, Mode=OneWayToSource, UpdateSourceTrigger=LostFocus}" />
+                            <PasswordBox materialDesign:HintAssist.Hint="{DynamicResource Password}"
+                                         xamlHelper:PasswordBoxHelper.Attach="True"
+                                         xamlHelper:PasswordBoxHelper.Password="{Binding ForgotPassword, Mode=OneWayToSource, UpdateSourceTrigger=LostFocus}" />
+                        </StackPanel>
+                        <Button VerticalAlignment="Bottom" Margin="0,0,0,60" Background="#FFED513D"
+                                Content="{DynamicResource SendVerificationCode}"
+                                BorderBrush="#FFED513D" HorizontalAlignment="Center"
+                                Command="{Binding ForgotPasswordCommand}" />
+                        <Button VerticalAlignment="Bottom" Margin="0,0,0,20" Background="#FF6C6C6C"
+                                Content="{DynamicResource Back}"
+                                BorderBrush="#FF6C6C6C" HorizontalAlignment="Center" Click="GotoLogin" />
+                    </Grid>
+                    <Grid Width="361">
+                        <StackPanel>
+                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24"
+                                       Padding="20,20,0,0" Text="{DynamicResource BeSureIsYou}" />
+                            <TextBlock Padding="20,5,20,0" TextWrapping="Wrap"
+                                       Text="{DynamicResource BeSureIsYouDetail}" />
+                        </StackPanel>
+                        <TextBox HorizontalAlignment="Center" VerticalAlignment="Center"
+                                 Width="300" materialDesign:HintAssist.Hint="{DynamicResource VerificationCode}"
+                                 Text="{Binding VerificationCode, Mode=OneWayToSource, UpdateSourceTrigger=LostFocus}" />
+                        <Button VerticalAlignment="Bottom" Margin="0,0,0,60" Background="#FFED513D"
+                                Content="{DynamicResource Verify}"
+                                BorderBrush="#FFED513D" HorizontalAlignment="Center" Command="{Binding VerifyCommand}" />
+                    </Grid>
+                    <Grid Width="361">
+                        <Button BorderBrush="{x:Null}" Style="{DynamicResource MaterialDesignRaisedButton}"
+                                Foreground="White" Background="#FF00C574"
+                                FontSize="20" HorizontalAlignment="Center" Click="GotoLogin" VerticalAlignment="Bottom"
+                                Margin="0,0,0,30">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{DynamicResource Login}" Padding="5" />
+                                <materialDesign:PackIcon Kind="ArrowLeft" VerticalAlignment="Center" Width="20"
+                                                         Height="20" />
+                            </StackPanel>
+                        </Button>
+                        <TextBlock HorizontalAlignment="Center" Text="{Binding ResultTitle}"
+                                   VerticalAlignment="Top" FontSize="36" Margin="0,40,0,0" />
+                        <TextBlock HorizontalAlignment="Center" Text="{Binding ResultDetail}"
+                                   VerticalAlignment="Top" FontSize="16" Margin="0,100,0,0" />
+                    </Grid>
+                </StackPanel>
+            </controls:MoveAnimationPanel>
+        </Border>
+        <Grid Grid.Row="0" x:Name="TopArea">
+            <Image
+                Source="Assets/Images/bg.jpg" MouseLeftButtonDown="CurrentWindowMove" Stretch="UniformToFill" />
+            <controls:MoveAnimationPanel x:Name="LogoMovePanel" MouseEnterAnimation="False" Margin="110,0,110,48"
+                                         VerticalAlignment="Center">
+                <controls:ClippingBorder CornerRadius="90">
+                    <Image Source="Assets/Images/Player_Logo.png"
+                           VerticalAlignment="Center" Margin="0" />
+                </controls:ClippingBorder>
+            </controls:MoveAnimationPanel>
+            <controls:MoveAnimationPanel x:Name="TopInfoMovePanel">
+                <StackPanel Orientation="Horizontal">
+                    <Grid Width="{Binding ActualWidth, ElementName=TopArea}"
+                          Height="{Binding ActualHeight, ElementName=TopArea}">
+                        <TextBlock Text="{DynamicResource Login}" Grid.Row="0" HorizontalAlignment="Center"
+                                   VerticalAlignment="Bottom"
+                                   Foreground="White" FontSize="36" Margin="0,0,0,10" />
+                    </Grid>
+                    <Grid Width="{Binding ActualWidth, ElementName=TopArea}"
+                          Height="{Binding ActualHeight, ElementName=TopArea}">
+                        <TextBlock x:Name="CurrentPageDetail" Text="{DynamicResource RegistrationDetail}"
+                                   HorizontalAlignment="Left"
+                                   Margin="128,124,0,0" VerticalAlignment="Top"
+                                   FontSize="16" Foreground="White" />
+                        <TextBlock x:Name="CurrentPageTitle" Text="{DynamicResource Registration}"
+                                   HorizontalAlignment="Left" Margin="128,80,0,0"
+                                   VerticalAlignment="Top" FontSize="36" Foreground="White" />
+                    </Grid>
+                </StackPanel>
+            </controls:MoveAnimationPanel>
+        </Grid>
+        <Border Grid.Row="0" x:Name="Toast" VerticalAlignment="Top" Height="0">
+            <Grid>
+                <Grid.Effect>
+                    <DropShadowEffect Direction="300" BlurRadius="10" ShadowDepth="0" Opacity="0.7" />
+                </Grid.Effect>
+                <TextBlock x:Name="ToastTitle" Text="{DynamicResource RegistrationFailed}" HorizontalAlignment="Center"
+                           VerticalAlignment="Top"
+                           Foreground="White" Background="{x:Null}" FontSize="25" />
+                <TextBlock x:Name="TotalDetail" Text="{DynamicResource RegistrationFailedDetail}"
+                           HorizontalAlignment="Center" Margin="0,37,0,0"
+                           VerticalAlignment="Top" Background="{x:Null}" Foreground="White" MaxWidth="361" Height="27"
+                           FontSize="10" />
+            </Grid>
+        </Border>
+        <controls:CrossButton Grid.Row="0" Background="{x:Null}" BorderBrush="{x:Null}"
+                              MouseDown="CloseForm" Height="30" VerticalAlignment="Top"
+                              HorizontalAlignment="Right" ToolTip="{DynamicResource CloseButtonToolTip}"
+                              Margin="0,10,10,0">
+            <materialDesign:PackIcon Kind="Close" Width="30" Height="30" Foreground="Red" />
+        </controls:CrossButton>
+    </Grid>
+</Window>

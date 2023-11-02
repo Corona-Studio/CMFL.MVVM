@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMFL.MVVM", "CMFL.MVVM\CMFL.MVVM.csproj", "{11FEB8AD-FE3A-4B92-BDE7-3092052D2AA9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9777E280-8601-4A6C-BD75-0D29FD4F5D6F} = {9777E280-8601-4A6C-BD75-0D29FD4F5D6F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heyo", "Heyo\Heyo.csproj", "{16C39249-E7BC-47AB-B2F1-99DE605A1203}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjCrypto", "ProjCrypto\ProjCrypto.csproj", "{65C2FEF0-9F97-45CD-8063-D92DAADAD7F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjBobcat", "ProjBobcat\ProjBobcat.csproj", "{9777E280-8601-4A6C-BD75-0D29FD4F5D6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMFL.MVVM.Tests", "CMFL.MVVM.Tests\CMFL.MVVM.Tests.csproj", "{E0845AA7-016D-46D8-A4F3-45609D5265A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjBobcat.Tests", "ProjBobcat.Tests\ProjBobcat.Tests.csproj", "{9AD62A06-7CB4-4A07-9386-7359E5EDABBF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11FEB8AD-FE3A-4B92-BDE7-3092052D2AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11FEB8AD-FE3A-4B92-BDE7-3092052D2AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11FEB8AD-FE3A-4B92-BDE7-3092052D2AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11FEB8AD-FE3A-4B92-BDE7-3092052D2AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C39249-E7BC-47AB-B2F1-99DE605A1203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C39249-E7BC-47AB-B2F1-99DE605A1203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C39249-E7BC-47AB-B2F1-99DE605A1203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C39249-E7BC-47AB-B2F1-99DE605A1203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C2FEF0-9F97-45CD-8063-D92DAADAD7F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C2FEF0-9F97-45CD-8063-D92DAADAD7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C2FEF0-9F97-45CD-8063-D92DAADAD7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C2FEF0-9F97-45CD-8063-D92DAADAD7F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9777E280-8601-4A6C-BD75-0D29FD4F5D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9777E280-8601-4A6C-BD75-0D29FD4F5D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9777E280-8601-4A6C-BD75-0D29FD4F5D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9777E280-8601-4A6C-BD75-0D29FD4F5D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0845AA7-016D-46D8-A4F3-45609D5265A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0845AA7-016D-46D8-A4F3-45609D5265A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0845AA7-016D-46D8-A4F3-45609D5265A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0845AA7-016D-46D8-A4F3-45609D5265A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AD62A06-7CB4-4A07-9386-7359E5EDABBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AD62A06-7CB4-4A07-9386-7359E5EDABBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AD62A06-7CB4-4A07-9386-7359E5EDABBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AD62A06-7CB4-4A07-9386-7359E5EDABBF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37ED25FA-DFB8-4AB3-BC76-1056A5D77A04}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/laolarou
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CMFL.MVVM\\CMFL.MVVM.csproj
+		SccProjectName1 = CMFL.MVVM
+		SccLocalPath1 = CMFL.MVVM
+		SccProjectUniqueName2 = Heyo\\Heyo.csproj
+		SccProjectName2 = Heyo
+		SccLocalPath2 = Heyo
+		SccProjectUniqueName3 = ProjCrypto\\ProjCrypto.csproj
+		SccProjectName3 = ProjCrypto
+		SccLocalPath3 = ProjCrypto
+		SccProjectUniqueName4 = ProjBobcat\\ProjBobcat.csproj
+		SccProjectName4 = ProjBobcat
+		SccLocalPath4 = ProjBobcat
+		SccProjectUniqueName5 = CMFL.MVVM.Tests\\CMFL.MVVM.Tests.csproj
+		SccProjectName5 = CMFL.MVVM.Tests
+		SccLocalPath5 = CMFL.MVVM.Tests
+		SccProjectUniqueName6 = ProjBobcat.Tests\\ProjBobcat.Tests.csproj
+		SccProjectName6 = ProjBobcat.Tests
+		SccLocalPath6 = ProjBobcat.Tests
+	EndGlobalSection
+EndGlobal

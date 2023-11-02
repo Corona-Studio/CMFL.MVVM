@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="SystemOpacityBlack1" Color="#CC212121" />
+    <SolidColorBrush x:Key="SystemOpacityBlack2" Color="#99212121" />
+    <SolidColorBrush x:Key="SystemOpacityBlack3" Color="#66212121" />
+
+    <SolidColorBrush x:Key="SystemOpacityWhite1" Color="#CCFAFAFA" />
+    <SolidColorBrush x:Key="SystemOpacityWhite2" Color="#99FAFAFA" />
+    <SolidColorBrush x:Key="SystemOpacityWhite3" Color="#66FAFAFA" />
+</ResourceDictionary>

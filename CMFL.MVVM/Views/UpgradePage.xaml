@@ -1,0 +1,122 @@
+﻿<Page x:Class="CMFL.MVVM.Views.UpgradePage"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CMFL.MVVM.Views"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" DataContext="{Binding UpgradePageViewModel,Source={StaticResource Locator}}"
+      d:DesignHeight="518" d:DesignWidth="730">
+    <materialDesign:DialogHost IsOpen="{Binding IsConfirmDialogOpen}">
+        <materialDesign:DialogHost.DialogContent>
+            <Border CornerRadius="3" Width="550" Height="300" Background="#4CFFFFFF">
+                <Grid>
+                    <TextBlock Padding="5">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="WarningDecagram" Foreground="#DDF44336" Width="40"
+                                                     Height="40" />
+                            <StackPanel>
+                                <TextBlock FontSize="20"
+                                           Text="{DynamicResource UpgradeDialogText1}" />
+                                <TextBlock Text="{DynamicResource UpgradeDialogText2}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </TextBlock>
+                    <ScrollViewer VerticalAlignment="Center" Margin="10,0" Height="180">
+                        <ListView VirtualizingStackPanel.IsVirtualizing="True"
+                                  VirtualizingStackPanel.VirtualizationMode="Recycling" FontSize="16" MaxWidth="513"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  ItemsSource="{Binding ConfirmContent}" />
+                    </ScrollViewer>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                        <Button Command="{Binding ConfirmCommand}" Background="#FF00E676" BorderBrush="#FF00E676"
+                                VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="#DD000000"
+                                Width="100">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="CheckCircle" Width="20" Height="20"
+                                                         VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                <TextBlock Padding="3" VerticalAlignment="Center"
+                                           FontSize="15" Text="{DynamicResource GotIt}" />
+                            </StackPanel>
+                        </Button>
+                        <TextBlock Padding="5" Foreground="#DDA0A0A0" Text="{DynamicResource UpgradeTip}" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </materialDesign:DialogHost.DialogContent>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"
+                        Margin="10,10,0,0">
+                <materialDesign:PackIcon Kind="PackageUp" Width="40" Height="40" Foreground="#FF14BB33"
+                                         VerticalAlignment="Center" />
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="36"
+                           Text="{DynamicResource UpgradePageTitle}" Padding="5" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"
+                        Margin="40,10,0,0">
+                <materialDesign:PackIcon Kind="Information" Foreground="#DDFFFFFF" Width="25" Height="25"
+                                         VerticalAlignment="Center" />
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#DDFFFFFF"
+                           Text="{DynamicResource UpgradeInformation}" Padding="5" />
+            </StackPanel>
+            <ScrollViewer Height="110" Width="600" VerticalAlignment="Center" HorizontalAlignment="Center"
+                          VerticalScrollBarVisibility="Auto" Background="#F0102027" Margin="0,10,0,0">
+                <ListView Width="550" VerticalAlignment="Top" HorizontalAlignment="Left"
+                          VirtualizingStackPanel.IsVirtualizing="True"
+                          VirtualizingStackPanel.VirtualizationMode="Recycling"
+                          Foreground="#DDFFFFFF" FontSize="12">
+                    <TextBlock>
+                        <Run Text="{DynamicResource Name}" />
+                        <Run Text=": " />
+                        <Run Text="{Binding UpdateInfoModel.Name}" />
+                    </TextBlock>
+                    <TextBlock>
+                        <Run Text="{DynamicResource TimeStamp}" />
+                        <Run Text=": " />
+                        <Run Text="{Binding UpdateInfoModel.Time}" />
+                    </TextBlock>
+                    <TextBlock>
+                        <Run Text="{DynamicResource Version}" />
+                        <Run Text=": " />
+                        <Run Text="{Binding UpdateInfoModel.Version}" />
+                    </TextBlock>
+                    <TextBlock>
+                        <Run Text="SHA256" />
+                        <Run Text=": " />
+                        <Run Text="{Binding UpdateInfoModel.Sha}" />
+                    </TextBlock>
+                </ListView>
+            </ScrollViewer>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left"
+                        Margin="40,10,0,0">
+                <materialDesign:PackIcon Kind="FormatListBulletedType" Foreground="#DDFFFFFF" Width="25" Height="25"
+                                         VerticalAlignment="Center" />
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#DDFFFFFF"
+                           Text="{DynamicResource UpgradeDetail}" Padding="5" />
+            </StackPanel>
+            <ScrollViewer Height="180" Width="600" VerticalAlignment="Center" HorizontalAlignment="Center"
+                          VerticalScrollBarVisibility="Auto" Background="#F0102027" Margin="0,10,0,0">
+                <ListView Width="550" VerticalAlignment="Top" HorizontalAlignment="Left"
+                          VirtualizingStackPanel.IsVirtualizing="True"
+                          VirtualizingStackPanel.VirtualizationMode="Recycling"
+                          Foreground="#DDFFFFFF" FontSize="12" ItemsSource="{Binding UpgradeContent}" />
+            </ScrollViewer>
+            <Button VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF07BD6B"
+                    BorderBrush="{x:Null}" Height="40" Width="140" Margin="0,10,0,0" Tag=""
+                    Command="{Binding DownloadUpgrade}">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Download" Padding="10" HorizontalAlignment="Center"
+                                             VerticalAlignment="Center" />
+                    <TextBlock Text="{Binding DownloadText}" Padding="10" VerticalAlignment="Center"
+                               HorizontalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <CheckBox IsChecked="{Binding CreateLinkOnDesktop, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                      HorizontalAlignment="Center" Margin="0,5,0,0" Background="#FFFFAE00" BorderBrush="#FFFFAE00"
+                      Foreground="#DDFFFFFF" Content="{DynamicResource CreateShortcut}" />
+        </StackPanel>
+    </materialDesign:DialogHost>
+</Page>

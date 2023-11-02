@@ -1,0 +1,262 @@
+﻿<heyo:WindowPlus x:Class="CMFL.MVVM.LiteWindow"
+                 TextElement.Foreground="{StaticResource MaterialDesignBody}"
+                 TextElement.FontWeight="Regular"
+                 TextElement.FontSize="13"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:heyo="clr-namespace:Heyo;assembly=Heyo"
+                 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                 xmlns:controls="clr-namespace:Heyo.Controls;assembly=Heyo"
+                 mc:Ignorable="d"
+                 WindowState="Normal"
+                 DataContext="{Binding LiteWindowViewModel, Source={StaticResource Locator}}"
+                 WindowStartupLocation="CenterScreen" WindowStyle="None"
+                 AllowsTransparency="True"
+                 Icon="Assets/Images/logo.png"
+                 Title="CraftMineFun启动器 - Lite" Height="450" Width="800" Background="#99FFFFFF" Aero="True"
+                 WindowEntrance="Fade">
+    <Grid>
+        <Grid Background="#B2009688" HorizontalAlignment="Left">
+            <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" Width="270">
+                <ListView BorderBrush="{x:Null}" Foreground="{x:Null}"
+                          ItemsSource="{Binding GameInfo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          Background="{x:Null}"
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Center" HorizontalContentAlignment="Stretch">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Grid.Triggers>
+                                    <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                                        <BeginStoryboard>
+                                            <Storyboard Storyboard.TargetName="GameName"
+                                                        Storyboard.TargetProperty="Margin">
+                                                <ThicknessAnimationUsingKeyFrames>
+                                                    <EasingThicknessKeyFrame KeyTime="0" Value="0">
+                                                        <EasingThicknessKeyFrame.EasingFunction>
+                                                            <PowerEase EasingMode="EaseOut" Power="8" />
+                                                        </EasingThicknessKeyFrame.EasingFunction>
+                                                    </EasingThicknessKeyFrame>
+                                                    <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="10,0,0,0">
+                                                        <EasingThicknessKeyFrame.EasingFunction>
+                                                            <PowerEase EasingMode="EaseOut" Power="8" />
+                                                        </EasingThicknessKeyFrame.EasingFunction>
+                                                    </EasingThicknessKeyFrame>
+                                                </ThicknessAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                    <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ThicknessAnimationUsingKeyFrames
+                                                    Storyboard.TargetName="GameName"
+                                                    Storyboard.TargetProperty="Margin">
+                                                    <EasingThicknessKeyFrame KeyTime="0" Value="10,0,0,0">
+                                                        <EasingThicknessKeyFrame.EasingFunction>
+                                                            <PowerEase EasingMode="EaseOut" Power="8" />
+                                                        </EasingThicknessKeyFrame.EasingFunction>
+                                                    </EasingThicknessKeyFrame>
+                                                    <EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="0">
+                                                        <EasingThicknessKeyFrame.EasingFunction>
+                                                            <PowerEase EasingMode="EaseOut" Power="8" />
+                                                        </EasingThicknessKeyFrame.EasingFunction>
+                                                    </EasingThicknessKeyFrame>
+                                                </ThicknessAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </Grid.Triggers>
+                                <Border Background="#7FFFFFFF" VerticalAlignment="Center"
+                                        HorizontalAlignment="Center" CornerRadius="4"
+                                        Height="Auto" Width="250" MinHeight="70">
+                                    <RadioButton GroupName="GameVersion"
+                                                 Style="{StaticResource RadioButtonStyle1}"
+                                                 Background="#19FFFFFF" Command="{Binding ChooseGameCommand}"
+                                                 IsChecked="{Binding IsChecked}" BorderBrush="{x:Null}" Padding="0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                   Source="Assets/Images/ResourcePack.jpg" Width="35" Height="35"
+                                                   Margin="5,0,0,0" />
+                                            <StackPanel x:Name="GameName"
+                                                        HorizontalAlignment="Left"
+                                                        Margin="0,0,0,0"
+                                                        ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                                        Width="Auto" MaxWidth="230">
+                                                <TextBlock TextWrapping="NoWrap" Text="{Binding Name}"
+                                                           Foreground="#DD000000" MaxWidth="270"
+                                                           HorizontalAlignment="Center" FontSize="20"
+                                                           VerticalAlignment="Center" Background="{x:Null}"
+                                                           Margin="20,0,0,0" TextTrimming="CharacterEllipsis" />
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+                                                            VerticalAlignment="Center" Margin="20,0,0,0">
+                                                    <Border CornerRadius="3" Padding="5,2.5"
+                                                            Background="#ffb300" VerticalAlignment="Center"
+                                                            HorizontalAlignment="Center">
+                                                        <TextBlock Text="{Binding Version}"
+                                                                   Foreground="#DD000000" FontSize="10" />
+                                                    </Border>
+                                                    <Border Margin="3,3,0,0" CornerRadius="3" Padding="5,1.5"
+                                                            Background="#29b6f6">
+                                                        <TextBlock Text="本地" Foreground="#DD000000" FontSize="10" />
+                                                    </Border>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </RadioButton>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
+        </Grid>
+        <Grid MouseDown="CurrentWindowMove" HorizontalAlignment="Right" VerticalAlignment="Top" Width="530" Height="40"
+              Background="#B21976D2">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Assets/Images/CraftMineFun_Launcher.ico" Width="20" Height="20"
+                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" />
+                <TextBlock Padding="5" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16"
+                           Foreground="#DDFFFFFF">
+                    CraftMineFun启动器 - Lite
+                </TextBlock>
+            </StackPanel>
+            <Button Click="MinizeWindow" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="4"
+                    Background="{x:Null}" BorderBrush="{x:Null}" Width="32" Margin="0,0,40,0">
+                <materialDesign:PackIcon Kind="WindowMinimize" />
+            </Button>
+            <Button Command="{Binding CloseAppCommand}" HorizontalAlignment="Right" VerticalAlignment="Center"
+                    Padding="4" Background="{x:Null}" BorderBrush="{x:Null}" Width="32">
+                <materialDesign:PackIcon Kind="Close" />
+            </Button>
+        </Grid>
+        <ScrollViewer HorizontalAlignment="Right" Height="350" Width="500" Margin="0,50,15,0" VerticalAlignment="Top">
+            <StackPanel>
+                <controls:MaterialCard Background="White" Padding="5" CornerRadius="3">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Padding="3" VerticalAlignment="Center">游戏名称：</TextBlock>
+                        <TextBox Width="400" CaretBrush="#FFFFC107"
+                                 Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
+                </controls:MaterialCard>
+                <controls:MaterialCard Background="White" Padding="5" CornerRadius="3" Margin="0,5,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Padding="3" VerticalAlignment="Center" HorizontalAlignment="Center">内存大小：</TextBlock>
+                        <TextBox Width="200" CaretBrush="#FFFFC107"
+                                 Text="{Binding MemorySize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock VerticalAlignment="Center" Padding="3">MB</TextBlock>
+                        <TextBlock Text="{Binding AvaiMem}" VerticalAlignment="Center" />
+                    </StackPanel>
+                </controls:MaterialCard>
+                <controls:MaterialCard Background="White" Padding="5" CornerRadius="3" Margin="0,5,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Padding="3" VerticalAlignment="Center">版本隔离模式：</TextBlock>
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center" VerticalAlignment="Center" Margin="330,0,0,0">
+                            <ToggleButton IsChecked="{Binding EnableVersionInsulation, Mode=TwoWay}" />
+                        </StackPanel>
+                    </StackPanel>
+                </controls:MaterialCard>
+                <Border Margin="0,10,0,0" CornerRadius="5">
+                    <materialDesign:Card
+                        Background="{DynamicResource MaterialDesignBackground}">
+                        <StackPanel>
+                            <Expander
+                                HorizontalAlignment="Stretch">
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="Information" Width="25" Height="25"
+                                                                 Foreground="#DD304FFE" />
+                                        <TextBlock Padding="4" Text="在Lite模式下我无法使用哪些功能？" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Expander.Header>
+                                <StackPanel
+                                    Orientation="Vertical"
+                                    TextBlock.Foreground="{DynamicResource MaterialDesignBody}"
+                                    Margin="24,8,24,16">
+                                    <TextBlock
+                                        Text="在Lite模式下，您将无法使用下列提及的功能：" />
+                                    <StackPanel Margin="0,10,0,0">
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center"
+                                                                     HorizontalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center"
+                                                       HorizontalAlignment="Center">
+                                                自动内存设置
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center">自动清理内存</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center">缺失文件补全功能</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center">正版登陆（包括第三方验证服务器）</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center">自定义启动参数</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center">自定义游戏窗口大小</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center">登陆到CMFL账号</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center">游戏异常处理系统</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center">游戏环境检测服务</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center">游戏文件管理（添加、删除游戏）</TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <materialDesign:PackIcon Kind="CloseOctagonOutline" Foreground="#DDEF5350"
+                                                                     VerticalAlignment="Center" />
+                                            <TextBlock Padding="3" VerticalAlignment="Center">启动器的个性化功能（背景、亚克力、模糊等）</TextBlock>
+                                        </StackPanel>
+                                        <Button Command="{Binding DisableLiteModeCommand}" Content="退出Lite（精简）模式"
+                                                Background="#FFF44336" BorderBrush="#FFF44336"
+                                                HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                Margin="0,5,0,0" FontSize="12" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+                        </StackPanel>
+                    </materialDesign:Card>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,5,5" Background="#3f51b5"
+                BorderBrush="#FF00796B" Height="Auto" Foreground="#DDFFFFFF" Command="{Binding StartGameCommand}">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Rocket" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                         Width="25" Height="25" />
+                <TextBlock Padding="3">发射！</TextBlock>
+            </StackPanel>
+        </Button>
+    </Grid>
+</heyo:WindowPlus>

@@ -1,0 +1,126 @@
+﻿<Page x:Class="CMFL.MVVM.Views.IntroPage3"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:CMFL.MVVM.Views"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:controls="clr-namespace:Heyo.Controls;assembly=Heyo"
+      mc:Ignorable="d" DataContext="{Binding IntroPage3ViewModel,Source={StaticResource Locator}}"
+      d:DesignHeight="518" d:DesignWidth="730">
+    <Page.Resources>
+        <Storyboard x:Key="GridOpacityRaise">
+            <DoubleAnimation
+                From="0" To="1"
+                SpeedRatio="1.5"
+                Storyboard.TargetName="MainGrid"
+                Storyboard.TargetProperty="Opacity" />
+        </Storyboard>
+    </Page.Resources>
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="24*" />
+            <RowDefinition Height="91*" />
+            <RowDefinition Height="159*" />
+        </Grid.RowDefinitions>
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="Grid.Loaded">
+                <BeginStoryboard Storyboard="{DynamicResource GridOpacityRaise}" />
+            </EventTrigger>
+        </Grid.Triggers>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="58*" />
+                <ColumnDefinition Width="541*" />
+            </Grid.ColumnDefinitions>
+            <materialDesign:PackIcon Margin="5" Kind="Memory" Foreground="#FF2E83FF" Padding="5" Grid.Column="1"
+                                     Width="Auto" Height="Auto" VerticalAlignment="Stretch"
+                                     HorizontalAlignment="Stretch" />
+            <TextBlock Foreground="White" FontSize="18" Grid.Column="2" VerticalAlignment="Center"
+                       HorizontalAlignment="Left" Text="{DynamicResource MemorySettings}" />
+        </Grid>
+        <TextBlock Grid.Row="1" Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center" Margin="20,7"
+                   Height="34">
+            <Run Text="{DynamicResource MemorySettingsDetail}" />
+            <Run Text="{DynamicResource AutomaticSetMemory}" Foreground="#FF00C5FF" />
+        </TextBlock>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="42*" />
+                <RowDefinition Height="17*" />
+            </Grid.RowDefinitions>
+            <controls:MaterialCard HorizontalAlignment="Center" Grid.Row="0"
+                                   VerticalAlignment="Center" MouseEnterAnimation="False" Padding="5"
+                                   Background="#33FFFFFF">
+                <controls:MaterialCard.ToolTip>
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="Alert" Foreground="#FFFFAE00" />
+                        <TextBlock Padding="5,0" Text="{DynamicResource MemorySettingTip}" />
+                    </StackPanel>
+                </controls:MaterialCard.ToolTip>
+                <StackPanel Orientation="Horizontal" Width="480">
+                    <materialDesign:PackIcon Kind="Memory" Foreground="White" Width="30" Height="30"
+                                             HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10" />
+                    <TextBlock Text="{DynamicResource LaunchMemory}" HorizontalAlignment="Left"
+                               VerticalAlignment="Center"
+                               FontSize="15"
+                               Foreground="White" />
+                    <TextBox HorizontalAlignment="Center"
+                             VerticalAlignment="Center"
+                             Width="133" Text="{Binding MemSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             Margin="150,0,0,0" Foreground="#DDFFFFFF">
+                        <materialDesign:HintAssist.Hint>
+                            <Run Foreground="White" Text="{DynamicResource LaunchMemory}" />
+                        </materialDesign:HintAssist.Hint>
+                    </TextBox>
+                    <TextBlock Text="Mb" HorizontalAlignment="Center"
+                               FontSize="18"
+                               Foreground="#C6FFFFFF" VerticalAlignment="Center" Background="{x:Null}" />
+                </StackPanel>
+            </controls:MaterialCard>
+            <StackPanel Orientation="Horizontal" Grid.Row="1"
+                        FlowDirection="RightToLeft" Margin="0,0,20,0">
+                <ToggleButton Style="{DynamicResource MaterialDesignSwitchToggleButton}"
+                              Command="{Binding AutoMemCommand}"
+                              Foreground="#FF82FF53"
+                              Background="#FF00FF97" HorizontalAlignment="Right"
+                              VerticalAlignment="Center" Height="26"
+                              RenderTransformOrigin="0.5,0.5" Width="43">
+                    <ToggleButton.ToolTip>
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Alert" Foreground="#FFFFAE00" />
+                            <TextBlock Padding="5,0" Text="{DynamicResource MemorySettingTip}" />
+                        </StackPanel>
+                    </ToggleButton.ToolTip>
+                    <ToggleButton.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" />
+                            <SkewTransform />
+                            <RotateTransform />
+                            <TranslateTransform />
+                        </TransformGroup>
+                    </ToggleButton.RenderTransform>
+                </ToggleButton>
+                <TextBlock Text="{DynamicResource AutomaticSetMemory}" HorizontalAlignment="Right"
+                           VerticalAlignment="Center"
+                           FontSize="15"
+                           Foreground="White" />
+            </StackPanel>
+        </Grid>
+        <Button Grid.Row="3" Background="#4CFFFFFF" BorderBrush="{x:Null}" Height="43"
+                Command="{Binding GoToNextCommand}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="246,0"
+                Width="127">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Padding="5"
+                           Text="{DynamicResource NextStep}" />
+                <materialDesign:PackIcon Kind="ArrowRightBoldCircleOutline" VerticalAlignment="Center"
+                                         HorizontalAlignment="Center" Width="25" Height="25" Padding="5" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</Page>

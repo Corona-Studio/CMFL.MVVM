@@ -1,0 +1,107 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Heyo.Controls">
+
+
+    <Style TargetType="{x:Type local:ImageRadioButton}">
+        <Setter Property="Height" Value="72" />
+        <Setter Property="Width" Value="128" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Ay.A.Brush.20}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ImageRadioButton}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Image x:Name="BackgroundImage" Source="{TemplateBinding Source}" Stretch="UniformToFill"
+                                   Margin="4" />
+                            <Border x:Name="mainBorder" Opacity="0" Background="{DynamicResource Ay.Brush14}" />
+                            <Label x:Name="label" Content="✔" Foreground="{DynamicResource Ay.Brush20}" FontSize="36"
+                                   Visibility="Collapsed" HorizontalAlignment="Center"
+                                   VerticalContentAlignment="Center" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsChecked,RelativeSource={RelativeSource Self}}"
+                                           Value="false" />
+                                <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}"
+                                           Value="true" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Opacity" TargetName="mainBorder" Value="0.3" />
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsChecked,RelativeSource={RelativeSource Self}}"
+                                           Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Opacity" TargetName="mainBorder" Value="0.5" />
+                            <Setter Property="Visibility" TargetName="label" Value="Visible" />
+                        </MultiDataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:ImageSwitchViewer}">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:ImageSwitchViewer}">
+                    <Grid>
+                        <Border Background="{TemplateBinding BorderBrush}" Margin="1" CornerRadius="3">
+                            <Border.Effect>
+                                <DropShadowEffect BlurRadius="5" ShadowDepth="0" Opacity="0.2" />
+                            </Border.Effect>
+                        </Border>
+                        <local:ClippingBorder Background="{TemplateBinding Background}"
+                                              BorderBrush="{TemplateBinding BorderBrush}"
+                                              BorderThickness="{TemplateBinding BorderThickness}"
+                                              ClipToBounds="True" CornerRadius="3" UseLayoutRounding="True"
+                                              SnapsToDevicePixels="True">
+                            <Grid Background="White">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Grid x:Name="imageHost" Grid.RowSpan="2" />
+                                <Border Background="#99FFFFFF" Grid.Row="1">
+                                    <StackPanel x:Name="radioButtonHost" HorizontalAlignment="Left"
+                                                VerticalAlignment="Center" Margin="16,4" Orientation="Horizontal"
+                                                Grid.Row="1" Height="24" Background="{x:Null}" />
+
+                                </Border>
+                            </Grid>
+                        </local:ClippingBorder>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Height" Value="160" />
+    </Style>
+
+
+    <Style TargetType="{x:Type local:MaterialButton}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MaterialButton}">
+                    <local:MaterialCard Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource TemplatedParent}}"
+                                        WaveFeedback="True">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </local:MaterialCard>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

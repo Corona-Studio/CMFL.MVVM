@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="Heyo.Controls.CrossButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Heyo.Controls"
+             mc:Ignorable="d"
+             x:Name="uc"
+             d:DesignHeight="30" d:DesignWidth="30" RenderTransformOrigin="0.5,0.5" Background="#00FF0000" Width="30"
+             Cursor="Hand">
+    <UserControl.Resources>
+        <Storyboard x:Key="OnMouseEnter1">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                          Storyboard.TargetName="border">
+                <EasingColorKeyFrame KeyTime="0" Value="#00FF3232" />
+                <EasingColorKeyFrame KeyTime="0:0:0.1" Value="#66FF3232" />
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="OnMouseLeave1">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                          Storyboard.TargetName="border">
+                <EasingColorKeyFrame KeyTime="0" Value="#66FF3232" />
+                <EasingColorKeyFrame KeyTime="0:0:0.1" Value="#00FF3232" />
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <!-->
+        <Storyboard x:Key="OnMouseLeave1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="userControl">
+                <EasingDoubleKeyFrame KeyTime="0" Value="90">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <!-->
+    </UserControl.Resources>
+    <UserControl.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform />
+            <SkewTransform />
+            <RotateTransform />
+            <TranslateTransform />
+        </TransformGroup>
+    </UserControl.RenderTransform>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter">
+            <BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave">
+            <BeginStoryboard x:Name="OnMouseLeave1_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave1}" />
+        </EventTrigger>
+        <!-->
+        <EventTrigger RoutedEvent="UIElement.MouseLeave">
+            <BeginStoryboard x:Name="OnMouseLeave1_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave1}"/>
+        </EventTrigger>
+        <!-->
+    </UserControl.Triggers>
+    <Border x:Name="border" BorderBrush="Black" BorderThickness="0" Margin="0" CornerRadius="100"
+            Background="#00FF3232">
+        <Grid x:Name="grid" Cursor="Hand" Margin="2">
+            <Border x:Name="one" BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Center" Height="300"
+                    Margin="0,0,0,0" VerticalAlignment="Center" Width="2" RenderTransformOrigin="0.5,0.5"
+                    Background="{Binding ElementName=uc, Path=Foreground}">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="45" />
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+            <Border x:Name="two" BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Center" Height="300"
+                    Margin="0" VerticalAlignment="Center" Width="2" RenderTransformOrigin="0.5,0.5"
+                    Background="{Binding ElementName=uc, Path=Foreground}">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="-45" />
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+        </Grid>
+    </Border>
+</UserControl>

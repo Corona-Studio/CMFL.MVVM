@@ -1,0 +1,441 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--主界面-->
+
+    <sys:String x:Key="LauncherTitle">CraftMineFun 啟動器</sys:String>
+
+    <sys:String x:Key="DidNotLoginToolTip">為什麽不登陸喵！</sys:String>
+
+    <sys:String x:Key="ChangeAvatar">修改頭像</sys:String>
+    <sys:String x:Key="ChangeAvatarToolTip">點擊更換您的頭像（維護中）</sys:String>
+
+    <sys:String x:Key="MinimizeButtonToolTip">最小化</sys:String>
+    <sys:String x:Key="CloseButtonToolTip">退出CMF啟動器</sys:String>
+
+    <sys:String x:Key="TryReconnect">點擊嘗試重新連接</sys:String>
+    <sys:String x:Key="TryReconnectToolTip">點擊此按鈕來嘗試重新連接到CMFL服務器主框架</sys:String>
+
+    <sys:String x:Key="HomePage">主頁</sys:String>
+    <sys:String x:Key="Games">遊戲</sys:String>
+    <sys:String x:Key="Plaza">廣場</sys:String>
+    <sys:String x:Key="Settings">設置</sys:String>
+
+    <!--主界面-->
+
+    <!--登錄界面-->
+    <sys:String x:Key="UserName">用戶名</sys:String>
+    <sys:String x:Key="Password">密碼</sys:String>
+    <sys:String x:Key="Email">郵箱</sys:String>
+
+    <sys:String x:Key="Login">登錄</sys:String>
+    <sys:String x:Key="Registration">註冊</sys:String>
+
+    <sys:String x:Key="LoginButtonToolTip">啟動身份驗證進程</sys:String>
+    <sys:String x:Key="RegistrationButtonToolTip">點擊該按鈕創建壹個新的賬號</sys:String>
+    <sys:String x:Key="ForgetButtonToolTip">如果您忘記了您的密碼，可以點擊這個按鈕找回</sys:String>
+    <sys:String x:Key="RememberMe">記住我</sys:String>
+
+    <sys:String x:Key="RegistrationSuccess">註冊成功</sys:String>
+    <sys:String x:Key="RegistrationSuccessDetail">註冊成功，趕快登陸吧！</sys:String>
+
+    <sys:String x:Key="RegistrationFailed">登錄失敗</sys:String>
+    <sys:String x:Key="RegistrationFailedDetail">原因：Null</sys:String>
+
+    <sys:String x:Key="RegistrationDetail">立刻擁有屬於您的遊戲賬號吧！</sys:String>
+
+    <!--登錄界面-->
+
+    <!--主頁-->
+
+    <sys:String x:Key="GetNewsFailed">抱歉，您可能暫時看不了新聞了</sys:String>
+    <sys:String x:Key="Retry">重試</sys:String>
+    <sys:String x:Key="ChangeBgmButtonToolTip">點擊這個按鈕您可以將BGM設置為自己的</sys:String>
+    <sys:String x:Key="BgmControlButtonToolTip">音樂控制開關</sys:String>
+    <sys:String x:Key="ResetBgmControlButtonToolTip">如果您的BGM遇到了壹些問題，您可以點擊此按鈕復位</sys:String>
+    <sys:String x:Key="CurrentPlaying">正在播放：</sys:String>
+
+    <!--主頁-->
+
+    <!--向導頁1-->
+
+    <sys:String x:Key="Welcome">歡迎</sys:String>
+    <sys:String x:Key="WelcomeDetail">歡迎您使用我們的啟動器，這是您的第壹次啟動，下面我們開始欽點，嗯。。我是指清點以下內容</sys:String>
+
+    <sys:String x:Key="ToDosDetail">以下是需要您設置或知曉的事務：</sys:String>
+
+    <sys:String x:Key="MojangAccountInfo">Mojang賬號信息</sys:String>
+    <sys:String x:Key="MemorySettings">內存設置</sys:String>
+    <sys:String x:Key="VersionInsulationSetting">版本隔離設定</sys:String>
+    <sys:String x:Key="JavaSettings">Java虛擬機設定</sys:String>
+    <sys:String x:Key="LauncherUsages">啟動器使用指南</sys:String>
+
+    <sys:String x:Key="NextStep">下壹步</sys:String>
+
+    <!--向導頁1-->
+
+    <!--向導頁2-->
+
+    <sys:String x:Key="MojangAccountInfoDetail">我們為您準備了兩種方式：1）您可以使用您的正版Mojang賬號登陸，我們將為您登陸您的賬號並加密保存所有數據 2）您也可以使用離線模式啟動您的遊戲，目前離線模式的遊戲名是您的啟動器賬號的用戶名</sys:String>
+
+    <sys:String x:Key="OnlineLogin">正版登陸</sys:String>
+    <sys:String x:Key="OfflineModeUserName">離線模式用戶名：</sys:String>
+
+    <sys:String x:Key="UseOfflineMode">使用離線模式</sys:String>
+
+    <!--向導頁2-->
+
+    <!--向導頁3-->
+
+    <sys:String x:Key="MemorySettingsDetail">這壹步需要您設置您的遊戲啟動內存，小於或等於512MB可能會導致壹系列問題，如果您不清楚應該設置多大的內存，請您打開</sys:String>
+    <sys:String x:Key="AutomaticSetMemory">自動設置遊戲啟動的內存</sys:String>
+
+    <sys:String x:Key="MemorySettingTip">請確保您分配給MC的運行內存是足夠的，否則會出現壹些意外情況</sys:String>
+
+    <sys:String x:Key="LaunchMemory">啟動內存</sys:String>
+
+    <!--向導頁3-->
+
+    <!--向導頁4-->
+
+    <sys:String x:Key="DefaultModeDescription">默認模式：設置遊戲的默認加載目錄為.minecraft</sys:String>
+    <sys:String x:Key="DefaultModeDescriptionHighlight">（即Mods，resourcepacks等文件將放在.minecraft中）</sys:String>
+
+    <sys:String x:Key="BmclModeDescription">BMCL模式:</sys:String>
+    <sys:String x:Key="BmclModeDescriptionHighlight">復制coremods到Versions/版本</sys:String>
+    <sys:String x:Key="BmclModeDescription2">裏，參見BMCL的啟動模式</sys:String>
+
+    <sys:String x:Key="MCLauncherModeDescription">MCLauncher模式：</sys:String>
+    <sys:String x:Key="MCLauncherModeDescriptionHighlight">Mods和resourcepacks等資源文件均放在Versions/版本 裏面</sys:String>
+    <sys:String x:Key="MCLauncherModeDescription2">，適合有不同遊戲版本的客戶端</sys:String>
+
+
+    <sys:String x:Key="UseDefaultMode">使用默認模式</sys:String>
+    <sys:String x:Key="UseBmclMode">使用BMCL模式</sys:String>
+    <sys:String x:Key="UseMCLauncherMode">使用MCLauncher模式</sys:String>
+
+    <!--向導頁4-->
+
+    <!--向導頁5-->
+
+    <sys:String x:Key="Congratulation">恭喜</sys:String>
+    <sys:String x:Key="CongratulationDetail">您已經完成了啟動器的基本設置！還有壹些事項需要您留意。</sys:String>
+
+    <sys:String x:Key="LauncherUsage1">您可能需要查看位於設置頁面的Java路徑是否設置正確！</sys:String>
+    <sys:String x:Key="LauncherUsage2">啟動器可以修改BGM，同時您也可以從CMFL服務器獲取。</sys:String>
+    <sys:String x:Key="LauncherUsage3">您可以更換您的用戶頭像。</sys:String>
+    <sys:String x:Key="LauncherUsage4">啟動器有許多彩蛋，趕快找找叭！</sys:String>
+
+    <sys:String x:Key="Done">完成</sys:String>
+
+    <!--向導頁5-->
+
+    <!--等待頁面-->
+
+    <sys:String x:Key="LoadingTitle">稍安勿躁</sys:String>
+    <sys:String x:Key="LoadingDetail">我們正在準備頁面</sys:String>
+
+    <!--等待頁面-->
+
+
+    <!--遊戲列表頁面-->
+
+    <sys:String x:Key="DragSupport">現在支持拖拽安裝遊戲文件了！您選擇的遊戲將為您的安裝位置</sys:String>
+
+    <sys:String x:Key="GameList">遊戲列表</sys:String>
+    <sys:String x:Key="GamePath">遊戲目錄</sys:String>
+    <sys:String x:Key="GetGames">獲取遊戲</sys:String>
+
+    <sys:String x:Key="EmptyGameList">hmmmm，壹個遊戲都沒有</sys:String>
+    <sys:String x:Key="EmptyGameListDetail">還不快去右上角的獲取更多版本來下載遊戲！</sys:String>
+
+    <sys:String x:Key="Local">本地</sys:String>
+    <sys:String x:Key="GameFileManagement">遊戲文件管理</sys:String>
+
+    <sys:String x:Key="Texture">材質</sys:String>
+    <sys:String x:Key="ScreenShot">截圖</sys:String>
+    <sys:String x:Key="Shader">光影</sys:String>
+    <sys:String x:Key="Mod">Mod</sys:String>
+    <sys:String x:Key="Map">地圖</sys:String>
+
+    <sys:String x:Key="ScreenShotToolTip">點擊查看圖片</sys:String>
+
+    <sys:String x:Key="OpenGameFolder">打開遊戲文件夾</sys:String>
+    <sys:String x:Key="DeleteGame">刪除遊戲</sys:String>
+
+    <sys:String x:Key="Confirm">確認</sys:String>
+
+    <sys:String x:Key="LoadingGameTitle">稍等片刻...</sys:String>
+    <sys:String x:Key="LoadingGameDetail">正在加載本地遊戲</sys:String>
+
+    <sys:String x:Key="DragDetectedText">監測到您拖入了文件</sys:String>
+
+    <sys:String x:Key="AddNewGamePath">添加壹個新的遊戲目錄</sys:String>
+    <sys:String x:Key="AddNewGamePathTip">註意：請壹定保證路徑以.minecraft文件夾結束！！！</sys:String>
+    <sys:String x:Key="AddNewGamePathWarning">否則可能出現依賴下載失敗等惡性BUG</sys:String>
+
+    <sys:String x:Key="Name">名稱</sys:String>
+    <sys:String x:Key="Path">路徑</sys:String>
+
+    <sys:String x:Key="Use">使用</sys:String>
+    <sys:String x:Key="Cancel">取消</sys:String>
+
+    <sys:String x:Key="GamePathManagement">遊戲目錄管理</sys:String>
+
+    <sys:String x:Key="DownloadGame">下載遊戲</sys:String>
+    <sys:String x:Key="AdvanceSearch">高級搜索</sys:String>
+
+    <sys:String x:Key="Keyword">關鍵字：</sys:String>
+    <sys:String x:Key="ReleaseBranch">發布分支：</sys:String>
+
+    <sys:String x:Key="StableBranch">正式發布分支</sys:String>
+    <sys:String x:Key="BetaBranch">Beta發布分支</sys:String>
+
+    <sys:String x:Key="GetOnlineGameLoadingText">正在拉取列表</sys:String>
+
+    <sys:String x:Key="ChooseForgeVersion">選擇您要下載的Forge版本</sys:String>
+    <sys:String x:Key="DownloadForgeTip">註意！從1.9開始，Forge必須要使用原版核心加載啟動，因此您需要下載對應的原版遊戲！</sys:String>
+
+    <sys:String x:Key="ChooseOptifineVersion">選擇您要下載的OptiFine版本</sys:String>
+    <sys:String x:Key="DownloadOptifineTip">在我們完成了Optifine的下載過後，我們會為您打開下載文件夾，請您將其移動到相應的版本。</sys:String>
+
+    <sys:String x:Key="StayTuned">比庫！這塊區域還在施工喵~</sys:String>
+
+    <sys:String x:Key="ReadMojangEULA">閱讀Mojang EULA</sys:String>
+
+    <sys:String x:Key="GetVersionFailed">獲取可用版本失敗</sys:String>
+
+    <sys:String x:Key="ChooseFileType">請選擇您要安裝的文件類型</sys:String>
+
+    <!--遊戲列表頁面-->
+
+    <!--廣場頁面-->
+
+    <sys:String x:Key="PlazaWelcome">歡迎來到廣場！</sys:String>
+    <sys:String x:Key="PlazaLoadingText">精彩內容正在加載</sys:String>
+
+    <sys:String x:Key="LauncherNews">CMFL新聞</sys:String>
+    <sys:String x:Key="LauncherOfficialSite">CMFL官方網站</sys:String>
+    <sys:String x:Key="LauncherVideo">CMFL視頻</sys:String>
+    <sys:String x:Key="LauncherPropagandaVideo">Bilibili上的宣傳片</sys:String>
+    <sys:String x:Key="LauncherPost">Mcbbs上的帖子</sys:String>
+
+    <sys:String x:Key="ImageNews">圖片資訊</sys:String>
+
+    <sys:String x:Key="PlazaPageFootage1">廣場服務由CMFL提供</sys:String>
+    <sys:String x:Key="PlazaPageFootage2">部分圖片以及視頻素材來自互聯網。</sys:String>
+    <sys:String x:Key="PlazaPageFootage3">版權所有 © CraftMineFun</sys:String>
+
+    <sys:String x:Key="LoginRequired">要求登錄</sys:String>
+    <sys:String x:Key="LoginRequiredDetail">登陸到您的CMFL賬戶以使用廣場</sys:String>
+
+    <!--廣場頁面-->
+
+    <!--設置頁面-->
+
+    <sys:String x:Key="ClientLaunch">客戶端啟動</sys:String>
+
+    <sys:String x:Key="GameName">遊戲名（僅本地模式）</sys:String>
+    <sys:String x:Key="GameNameHint">填入您的遊戲名</sys:String>
+
+    <sys:String x:Key="JoinServerAfterLaunch">啟動後加入服務器（可選）</sys:String>
+    <sys:String x:Key="ServerIP">填入您的服務器IP</sys:String>
+    <sys:String x:Key="ResumeMusic">關閉遊戲之後恢復音樂</sys:String>
+    <sys:String x:Key="AdvanceLaunchSetting">MineCraft高級啟動參數</sys:String>
+    <sys:String x:Key="AdvanceLaunchWarning">如果您不清楚這些參數的具體含義，請不要瞎吉爾修改！</sys:String>
+    <sys:String x:Key="EnableCGC">啟用CGC</sys:String>
+
+    <sys:String x:Key="AddParameterManually">手動輸入參數，</sys:String>
+    <sys:String x:Key="AddParameterManuallyHighlight">每壹條參數後面必須追加壹個空格</sys:String>
+
+    <sys:String x:Key="ParameterInputHint">輸入您的參數，使用空格分割</sys:String>
+
+    <sys:String x:Key="ScreenResolution">遊戲窗口分辨率</sys:String>
+    <sys:String x:Key="FullScreen">全屏</sys:String>
+
+    <sys:String x:Key="Bmclapi">國內下載加速服務（BMCLAPI）</sys:String>
+    <sys:String x:Key="EnableBmclapiToolTip">如果您在國內，我們推薦打開加速功能以獲得更快的下載速度，</sys:String>
+    <sys:String x:Key="EnableBmclapiToolTipHighlight">如果出現問題請關閉該功能</sys:String>
+
+    <sys:String x:Key="EnableHttpsForBmclapi">為BMCLAPI啟用HTTPS（安全連接）</sys:String>
+    <sys:String x:Key="EnableHttpsForBmclapiToolTip">使用HTTPS可以避免在使用下載服務器時遭遇劫持等問題，</sys:String>
+    <sys:String x:Key="EnableHttpsForBmclapiToolTipHighlight">如果出現無法下載的問題請嘗試關閉該功能。</sys:String>
+
+    <sys:String x:Key="DetectServerAutomatic">自動確定最快的下載服務器</sys:String>
+    <sys:String x:Key="DetectServerAutomaticToolTip">使用此功能之後，我們會自動確定延遲最低的下載服務器。</sys:String>
+
+    <sys:String x:Key="JavaPath">Java路徑</sys:String>
+    <sys:String x:Key="JavaPathToolTip">請確保您填寫的Java路徑正確，如果您不清楚，可以點擊</sys:String>
+    <sys:String x:Key="JavaPathToolTipHighlight">自動設置Java按鈕。</sys:String>
+
+    <sys:String x:Key="SetJavaAutomatic">自動設置JAVA</sys:String>
+    <sys:String x:Key="DownloadJava">獲取JAVA</sys:String>
+    <sys:String x:Key="DownloadJavaToolTip">點擊該按鈕我們將為您下載適合您系統的JAVA。</sys:String>
+
+    <sys:String x:Key="Browse">瀏覽</sys:String>
+
+    <sys:String x:Key="CleanMemoryAutomatic">啟動前自動清理內存</sys:String>
+    <sys:String x:Key="CleanMemoryNow">立即清理</sys:String>
+    <sys:String x:Key="CleanMemoryToolTip">將閑置的系統物理內存轉移到虛擬內存中。請在內存爆滿時謹慎選用，有導致更加卡頓的可能。</sys:String>
+
+    <sys:String x:Key="UISettings">界面效果</sys:String>
+
+    <sys:String x:Key="EnableAnimation">啟動器動畫效果</sys:String>
+    <sys:String x:Key="EnableAnimationToolTip">開啟或關閉啟動器中絕大部分的動畫效果，這將提高壹部分性能</sys:String>
+
+    <sys:String x:Key="AnimationFps">自定義啟動器動畫FPS（重啟生效）</sys:String>
+    <sys:String x:Key="AnimationFpsToolTip">啟用該選項後程序會使用您自定的動畫FPS，默認為60FPS</sys:String>
+    <sys:String x:Key="AnimationFpsHint">自定義fps</sys:String>
+
+    <sys:String x:Key="BlurEffect">模糊效果（重啟生效）</sys:String>
+    <sys:String x:Key="BlurEffectToolTip">該方法適用於Win7及以上的的操作系統</sys:String>
+
+    <sys:String x:Key="AcrylicEffect">亞克力效果（重啟生效，僅限Win10）</sys:String>
+    <sys:String x:Key="AcrylicEffectToolTip">該方法只適用於Windows10且操作系統版本號</sys:String>
+    <sys:String x:Key="AcrylicEffectHighlight">高於17143.X的機器</sys:String>
+
+    <sys:String x:Key="Background">主界面背景</sys:String>
+    <sys:String x:Key="BackgroundToolTip">您在使用圖片作為背景前需要關閉模糊選項</sys:String>
+
+    <sys:String x:Key="RandomBackground">隨機壁紙（重啟生效）</sys:String>
+    <sys:String x:Key="RandomBackgroundToolTip">請確保在"壁紙"文件夾內有至少2張圖片</sys:String>
+
+    <sys:String x:Key="BackgroundBlurRadius">背景模糊度</sys:String>
+
+    <sys:String x:Key="AccountSettings">賬戶管理</sys:String>
+
+    <sys:String x:Key="ServerStatusCheck">服務狀態檢測</sys:String>
+    <sys:String x:Key="ServerStatusCheckDetail">當您遇到連接問題時，您可以通過該功能確定各個服務器的運行狀態</sys:String>
+
+    <sys:String x:Key="DetailedLogging">在日誌中記錄詳細的Debug信息以供開發人員使用</sys:String>
+    <sys:String x:Key="LiteMode">使用精簡模式（重啟生效）</sys:String>
+    <sys:String x:Key="ForceLaunch">強制啟動遊戲（繞過文件檢查）</sys:String>
+
+    <sys:String x:Key="About">關於</sys:String>
+
+    <sys:String x:Key="Cleanup">清空</sys:String>
+    <sys:String x:Key="CleanupToolTip">清空啟動器之前的所有配置文件</sys:String>
+
+    <sys:String x:Key="Reset">重置</sys:String>
+    <sys:String x:Key="ResetToolTip">重置該啟動器的配置文件</sys:String>
+
+    <sys:String x:Key="AboutToolTip">哇~關於我們嘻嘻</sys:String>
+
+    <sys:String x:Key="Save">保存</sys:String>
+
+    <sys:String x:Key="CreateNewAccount">創建壹個新的賬戶</sys:String>
+    <sys:String x:Key="CreateNewAccountHint">如果您要創建在線賬戶，請填寫</sys:String>
+
+    <sys:String x:Key="AuthLib">AuthLib驗證服務器（可選）</sys:String>
+    <sys:String x:Key="AuthLibHint">AuthLib驗證服務器地址</sys:String>
+
+    <!--設置頁面-->
+
+    <!--關於頁面-->
+
+    <sys:String x:Key="AboutTitle">本啟動器是由CraftMineFun開發組制作</sys:String>
+
+    <sys:String x:Key="GroupMembers">主要成員：老臘肉、Leon、CodingEric</sys:String>
+    <sys:String x:Key="UI">UI（用戶界面）：老臘肉</sys:String>
+    <sys:String x:Key="LauncherCore">啟動器核心：老臘肉、CodingEric</sys:String>
+    <sys:String x:Key="LauncherSupportPackage">啟動器支持庫：Leon</sys:String>
+    <sys:String x:Key="Backend">後端：CodingEric</sys:String>
+    <sys:String x:Key="Support">開發助力：蘿莉宅、XiaoJiang</sys:String>
+    <sys:String x:Key="API">部分API接口提供：Srar</sys:String>
+    <sys:String x:Key="Donate">服務器贊助：星星、YingXi</sys:String>
+
+    <sys:String x:Key="OpenSourceProjectUsageTitle">開源項目使用</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage1">ProjBobcat</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage2">Mahapps</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage3">MaterialDesignInXamlToolkit</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage4">AcrylicWPF</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage5">MVVMLight</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage6">LiveChart</sys:String>
+
+    <sys:String x:Key="MoreTitle">更多</sys:String>
+    <sys:String x:Key="More1">啟動器的部分圖片來源於Mojang官網以及Pixiv</sys:String>
+    <sys:String x:Key="More2">視頻接口來自於BiliPlus</sys:String>
+    <sys:String x:Key="More3">啟動器音樂來自互聯網</sys:String>
+    <sys:String x:Key="More4">同時也感謝由BangBang93提供的BMCLAPI國內加速接口</sys:String>
+
+    <!--關於頁面-->
+
+    <!--異常處理頁面-->
+
+    <sys:String x:Key="ExceptionPageTitle">淦！這辣雞啟動器又爆炸了。</sys:String>
+
+    <sys:String x:Key="ExceptionDetail">這是關於本次崩潰的詳細信息</sys:String>
+    <sys:String x:Key="GotIt">了解了！</sys:String>
+
+    <!--異常處理頁面-->
+
+    <!--遊戲崩潰處理頁面-->
+
+    <sys:String x:Key="GameLaunchErrorPageTitle">遊戲崩潰處理系統</sys:String>
+
+    <!--遊戲崩潰處理頁面-->
+
+    <!--更新完成頁面-->
+
+    <sys:String x:Key="UpgradeComplete">更新已完成</sys:String>
+    <sys:String x:Key="UpgradeCompleteDetail">重啟以完成更新</sys:String>
+
+    <!--更新完成頁面-->
+
+    <!--更新頁面-->
+
+    <sys:String x:Key="UpgradePageTitle">發現新更新！</sys:String>
+    <sys:String x:Key="UpgradeDetail">以下是本次更新的內容</sys:String>
+
+    <sys:String x:Key="UpgradeDialogText1">喔喔喔！</sys:String>
+    <sys:String x:Key="UpgradeDialogText2">在您更新之前，這些註意事項您是需要知曉的。</sys:String>
+
+    <sys:String x:Key="UpgradeTip">您只需再次點擊下載按鈕即可開始下載。</sys:String>
+
+    <sys:String x:Key="CreateShortcut">在桌面上創建啟動器的快捷方式</sys:String>
+
+    <!--更新頁面-->
+
+    <!--遊戲環境檢測頁面-->
+
+    <sys:String x:Key="GameEnvCheckTitle">遊戲環境檢測服務</sys:String>
+
+    <sys:String x:Key="GameEnvCheckResult">本次的檢測結果如下</sys:String>
+
+    <sys:String x:Key="LetMeThink">讓我想想</sys:String>
+
+    <!--遊戲環境檢測頁面-->
+
+    <!--賬戶管理控件-->
+
+    <sys:String x:Key="PleaseWait">請稍候</sys:String>
+    <sys:String x:Key="Getting">正在獲取</sys:String>
+    <sys:String x:Key="UUIDTip">將鼠標移動到UUID上以查看完整UUID</sys:String>
+
+    <sys:String x:Key="UseAccount">使用該賬戶</sys:String>
+    <sys:String x:Key="DeleteAccount">刪除該賬戶</sys:String>
+
+    <!--賬戶管理控件-->
+
+    <!--公告控件-->
+
+    <sys:String x:Key="AnnounceWaiting">正在向服務器請求公告信息......</sys:String>
+
+    <!--公告控件-->
+
+    <!--遊戲時長記錄控件-->
+
+    <sys:String x:Key="LoggedGameTime">記錄的遊戲時長</sys:String>
+    <sys:String x:Key="LoggedGameTimeDetail">（區分版本）</sys:String>
+
+    <sys:String x:Key="TotalLoggedGameTime">總共記錄的遊戲時長</sys:String>
+
+    <!--遊戲時長記錄控件-->
+
+    <!--系統性能控件-->
+
+    <sys:String x:Key="SystemMonitorTitle">系統性能監視器</sys:String>
+    <sys:String x:Key="SystemMonitorDetail">（內存占用）</sys:String>
+
+    <!--系統性能控件-->
+</ResourceDictionary>

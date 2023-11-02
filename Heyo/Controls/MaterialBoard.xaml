@@ -1,0 +1,81 @@
+﻿<local:MaterialButton x:Class="Heyo.Controls.MaterialBoard"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:local="clr-namespace:Heyo.Controls"
+                      mc:Ignorable="d"
+                      Height="260" Width="200" CornerRadius="2" Background="#FF00A1D1">
+    <local:MaterialButton.Resources>
+        <Storyboard x:Key="OnMouseEnter1">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)"
+                                              Storyboard.TargetName="grid">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut" Power="3" />
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="OnMouseLeave1">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)"
+                                              Storyboard.TargetName="grid">
+                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="0,10,0,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <PowerEase EasingMode="EaseOut" Power="3" />
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+    </local:MaterialButton.Resources>
+    <local:MaterialButton.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter">
+            <BeginStoryboard Storyboard="{StaticResource OnMouseEnter1}" />
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave">
+            <BeginStoryboard x:Name="OnMouseLeave1_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave1}" />
+        </EventTrigger>
+    </local:MaterialButton.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition x:Name="Row1" Height="64" />
+        </Grid.RowDefinitions>
+        <StackPanel Margin="8,0" Cursor="Hand">
+            <Grid Height="16" />
+            <Grid HorizontalAlignment="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="titleLabel" Foreground="White" Content="Title" FontFamily="Microsoft YaHei" Padding="0"
+                       FontSize="18.667" Height="32" Margin="5,0,0,0" TextOptions.TextRenderingMode="ClearType" />
+                <!--<Image Grid.Column="1" Height="20" Width="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,2,0,0" Source="/HeyoMC;component/Resources/connect_on.png"/>-->
+            </Grid>
+            <TextBlock x:Name="titleBlcok" Foreground="White" FontFamily="Microsoft YaHei UI Light" TextWrapping="Wrap"
+                       TextOptions.TextRenderingMode="ClearType" Padding="5,0" FontSize="13.333" Margin="0">
+                Genius is one per cent inspiration and ninety-nine per cent perspiration,Accordingly,a "genius" is often merely a talented person who has done all his or her homework
+            </TextBlock>
+        </StackPanel>
+        <Grid x:Name="grid" Grid.Row="1" Background="#99FFFFFF" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <local:Avatar x:Name="userAvatar" Height="36" Width="36" BorderBrush="White" CornerRadius="24" Margin="8,0"
+                          VerticalAlignment="Center" Cursor="Hand" BorderThickness="1" Background="#FF2E576A" />
+            <Grid Grid.Column="1">
+                <StackPanel VerticalAlignment="Center">
+                    <Label x:Name="userLabel" Foreground="{DynamicResource Ay.Brush11}" Content="Something new"
+                           FontFamily="Noto Sans S Chinese Regular" Padding="0" FontSize="16" Margin="0"
+                           TextOptions.TextRenderingMode="ClearType" Cursor="Hand" />
+                    <Label Foreground="{DynamicResource  Ay.Brush11}" FontFamily="Noto Sans S Chinese DemiLight"
+                           TextOptions.TextRenderingMode="ClearType" Padding="0" VerticalAlignment="Center"
+                           Cursor="Hand">
+                        Detail for new things.
+                    </Label>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</local:MaterialButton>

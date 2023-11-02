@@ -1,0 +1,870 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- 翻译作者信息-->
+    <sys:String x:Key="TranslatorInfo">en_US Translated By jonW [LangVer 0.3]</sys:String>
+    <!-- 翻译作者信息-->
+
+    <!--主界面-->
+
+    <sys:String x:Key="LauncherTitle">CraftMineFun Launcher</sys:String>
+
+    <sys:String x:Key="DidNotLoginToolTip">Try login?</sys:String>
+
+    <sys:String x:Key="ChangeAvatar">Modify avatar</sys:String>
+    <sys:String x:Key="ChangeAvatarToolTip">Modify avatar(Maintenance)</sys:String>
+
+    <sys:String x:Key="MinimizeButtonToolTip">Minimize</sys:String>
+    <sys:String x:Key="CloseButtonToolTip">Exit</sys:String>
+
+    <sys:String x:Key="TryReconnect">Reconnect</sys:String>
+    <sys:String x:Key="TryReconnectToolTip">Click this button to try to reconnect to the CMFL server main frame.</sys:String>
+
+    <sys:String x:Key="HomePage">Home</sys:String>
+    <sys:String x:Key="Games">Game</sys:String>
+    <sys:String x:Key="Plaza">Plaza</sys:String>
+    <sys:String x:Key="Settings">Settings</sys:String>
+
+    <!--主界面-->
+
+    <!--登录界面-->
+    <sys:String x:Key="UserName">Username</sys:String>
+    <sys:String x:Key="Password">Password</sys:String>
+    <sys:String x:Key="Email">Email</sys:String>
+
+    <sys:String x:Key="Login">Login</sys:String>
+    <sys:String x:Key="Registration">Registration</sys:String>
+
+    <sys:String x:Key="LoginButtonToolTip">Click to log in to your account.</sys:String>
+    <sys:String x:Key="RegistrationButtonToolTip">Click to register an account.</sys:String>
+    <sys:String x:Key="ForgetButtonToolTip">Click to retrieve your account.</sys:String>
+    <sys:String x:Key="RememberMe">Remember me</sys:String>
+
+    <sys:String x:Key="RegistrationSuccess">Registration Success!</sys:String>
+    <sys:String x:Key="RegistrationSuccessDetail">Registration is successful, log in!</sys:String>
+
+    <sys:String x:Key="RegistrationFailed">Login failed.</sys:String>
+    <sys:String x:Key="RegistrationFailedDetail">Reason:Null</sys:String>
+
+    <sys:String x:Key="RegistrationDetail">Have your game account now!</sys:String>
+
+    <!--登录界面-->
+
+    <!--主页-->
+
+    <sys:String x:Key="GetNewsFailed">Sorry, you may not be able to read the news for the time being!</sys:String>
+    <sys:String x:Key="Retry">Retry</sys:String>
+    <sys:String x:Key="ChangeBgmButtonToolTip">Set up your own BGM.</sys:String>
+    <sys:String x:Key="BgmControlButtonToolTip">BGM Control Button.</sys:String>
+    <sys:String x:Key="ResetBgmControlButtonToolTip">Reset BGM.</sys:String>
+    <sys:String x:Key="CurrentPlaying">Now Playing:</sys:String>
+
+    <!--主页-->
+
+    <!--向导页1-->
+
+    <sys:String x:Key="Welcome">Welcome</sys:String>
+    <sys:String x:Key="WelcomeDetail">Welcome to this launcher, this is your first launch, below we will be using the first time configuration.</sys:String>
+
+    <sys:String x:Key="ToDosDetail">Here are the things you need to set up or know:</sys:String>
+
+    <sys:String x:Key="MojangAccountInfo">Mojang Account</sys:String>
+    <sys:String x:Key="MemorySettings">Memory</sys:String>
+    <sys:String x:Key="VersionInsulationSetting">Insulation</sys:String>
+    <sys:String x:Key="JavaSettings">Java</sys:String>
+    <sys:String x:Key="LauncherUsages">Launcher Usages</sys:String>
+
+    <sys:String x:Key="NextStep">Next</sys:String>
+
+    <!--向导页1-->
+
+    <!--向导页2-->
+
+    <sys:String x:Key="MojangAccountInfoDetail">We have two ways for you:1)You can use Mojang Account to log in, and we will encrypt and save your account. 2)You can also log in with an offline account,User name in offline mode is the CMFL account user name.</sys:String>
+
+    <sys:String x:Key="OnlineLogin">Online Login</sys:String>
+    <sys:String x:Key="OfflineModeUserName">Offline Mode UserName:</sys:String>
+
+    <sys:String x:Key="UseOfflineMode">Use offline mode</sys:String>
+
+    <!--向导页2-->
+
+    <!--向导页3-->
+
+    <sys:String x:Key="MemorySettingsDetail">This step requires you to set up your game startup memory,For the smooth operation of the game, please set as large as possible.If you don't know,please open</sys:String>
+    <sys:String x:Key="AutomaticSetMemory">Automatic Set Memory</sys:String>
+
+    <sys:String x:Key="MemorySettingTip">Make sure you allocate enough memory for the game.</sys:String>
+
+    <sys:String x:Key="LaunchMemory">Launch Memory</sys:String>
+
+    <!--向导页3-->
+
+    <!--向导页4-->
+
+    <sys:String x:Key="DefaultModeDescription">Default mode: set the default loading directory of the game to .minecraft</sys:String>
+    <sys:String x:Key="DefaultModeDescriptionHighlight">Game resources exist in folder .minecraft</sys:String>
+
+    <sys:String x:Key="BmclModeDescription">BMCL Mode:</sys:String>
+    <sys:String x:Key="BmclModeDescriptionHighlight">Copy coremods to Versions/</sys:String>
+    <sys:String x:Key="BmclModeDescription2">,See start mode of bmcl</sys:String>
+
+    <sys:String x:Key="MCLauncherModeDescription">MCLauncher Mode:</sys:String>
+    <sys:String x:Key="MCLauncherModeDescriptionHighlight">Resource files such as MODS and resourcepacks are placed in the versions folder.</sys:String>
+    <sys:String x:Key="MCLauncherModeDescription2">,Suitable for clients with different game versions.</sys:String>
+
+
+    <sys:String x:Key="UseDefaultMode">Default</sys:String>
+    <sys:String x:Key="UseBmclMode">BMCL</sys:String>
+    <sys:String x:Key="UseMCLauncherMode">MCLauncher</sys:String>
+
+    <!--向导页4-->
+
+    <!--向导页5-->
+
+    <sys:String x:Key="Congratulation">Congratulations!</sys:String>
+    <sys:String x:Key="CongratulationDetail">You have finished the basic setup of the launcher! There are other things you need to pay attention to.</sys:String>
+
+    <sys:String x:Key="LauncherUsage1">You may need to see if the Java path on the settings page is set correctly!</sys:String>
+    <sys:String x:Key="LauncherUsage2">The Launcher can modify BGM, and you can get it from CMFL server.</sys:String>
+    <sys:String x:Key="LauncherUsage3">You can change your user's Avatar.</sys:String>
+    <sys:String x:Key="LauncherUsage4">There are many interesting things waiting for you to find in the Launcher!</sys:String>
+
+    <sys:String x:Key="Done">Done</sys:String>
+
+    <!--向导页5-->
+
+    <!--等待页面-->
+
+    <sys:String x:Key="LoadingTitle">Please Wait...</sys:String>
+    <sys:String x:Key="LoadingDetail">Loading...</sys:String>
+
+    <!--等待页面-->
+
+
+    <!--游戏列表页面-->
+
+    <sys:String x:Key="DragSupport">You can drag and drop game files to import!</sys:String>
+
+    <sys:String x:Key="GameList">Game List</sys:String>
+    <sys:String x:Key="GamePath">Game Path</sys:String>
+    <sys:String x:Key="GetGames">Get Games</sys:String>
+
+    <sys:String x:Key="EmptyGameList">No game!!!!!!!</sys:String>
+    <sys:String x:Key="EmptyGameListDetail">Click the get button in the upper right corner to download the game!</sys:String>
+
+    <sys:String x:Key="Local">Local</sys:String>
+    <sys:String x:Key="GameFileManagement">Game File</sys:String>
+
+    <sys:String x:Key="Texture">Texture</sys:String>
+    <sys:String x:Key="ScreenShot">ScreenShot</sys:String>
+    <sys:String x:Key="Shader">Shader</sys:String>
+    <sys:String x:Key="Mod">Mod</sys:String>
+    <sys:String x:Key="Map">Map</sys:String>
+
+    <sys:String x:Key="ScreenShotToolTip">Click to view the picture.</sys:String>
+
+    <sys:String x:Key="OpenGameFolder">Open game folder.</sys:String>
+    <sys:String x:Key="DeleteGame">Delete game.</sys:String>
+
+    <sys:String x:Key="Confirm">Confirm</sys:String>
+
+    <sys:String x:Key="LoadingGameTitle">Please Wait...</sys:String>
+    <sys:String x:Key="LoadingGameDetail">Loading...</sys:String>
+
+    <sys:String x:Key="DragDetectedText">It is detected that you have dragged the file.</sys:String>
+
+    <sys:String x:Key="AddNewGamePath">Add a new game folder</sys:String>
+    <sys:String x:Key="AddNewGamePathTip">Note: please make sure the path ends in folder .minecraft!</sys:String>
+    <sys:String x:Key="AddNewGamePathWarning">Otherwise, there may be vicious bugs such as dependency download failure.</sys:String>
+
+    <sys:String x:Key="Name">Name</sys:String>
+    <sys:String x:Key="Path">Path</sys:String>
+
+    <sys:String x:Key="Use">Use</sys:String>
+    <sys:String x:Key="Cancel">Cancel</sys:String>
+    <sys:String x:Key="Close">Close</sys:String>
+
+    <sys:String x:Key="GamePathManagement">Game Path</sys:String>
+
+    <sys:String x:Key="DownloadGame">Download Game</sys:String>
+    <sys:String x:Key="AdvanceSearch">Advance Search</sys:String>
+
+    <sys:String x:Key="GameSearchHint">Fill in keywords (optional)</sys:String>
+    <sys:String x:Key="ForgeSearchHint">Forge Version (optional)</sys:String>
+
+    <sys:String x:Key="Keyword">Keyword:</sys:String>
+    <sys:String x:Key="ReleaseBranch">Branch:</sys:String>
+
+    <sys:String x:Key="StableBranch">Stable</sys:String>
+    <sys:String x:Key="BetaBranch">Beta</sys:String>
+
+    <sys:String x:Key="GetOnlineGameLoadingText">Loading...</sys:String>
+
+    <sys:String x:Key="ChooseForgeVersion">Select the forge version:</sys:String>
+    <sys:String x:Key="DownloadForgeTip">Be careful! From 1.9, forge must be started with the original core load, so you need to download the corresponding original game!</sys:String>
+
+    <sys:String x:Key="ChooseOptifineVersion">Select the Optifine version:</sys:String>
+    <sys:String x:Key="DownloadOptifineTip">After we have finished downloading optifine, we will open the download folder for you, please move it to the corresponding version.</sys:String>
+
+    <sys:String x:Key="StayTuned">In construction.</sys:String>
+
+    <sys:String x:Key="ReadMojangEULA">Read Mojang EULA</sys:String>
+
+    <sys:String x:Key="GetVersionFailed">Get Version Failed</sys:String>
+
+    <sys:String x:Key="ChooseFileType">Choose File Type</sys:String>
+
+    <!--游戏列表页面-->
+
+    <!--游戏异常处理页面-->
+
+    <sys:String x:Key="GameErrorProcessor">Game Error Processor System.</sys:String>
+
+    <!--游戏异常处理页面-->
+
+    <!--广场页面-->
+
+    <sys:String x:Key="PlazaWelcome">Welcome to the Plaza!</sys:String>
+    <sys:String x:Key="PlazaLoadingText">Loading...</sys:String>
+
+    <sys:String x:Key="LauncherNews">News</sys:String>
+    <sys:String x:Key="LauncherOfficialSite">Official Site</sys:String>
+    <sys:String x:Key="LauncherVideo">Video</sys:String>
+    <sys:String x:Key="LauncherPropagandaVideo">Launcher Propaganda Video</sys:String>
+    <sys:String x:Key="LauncherPost">Launcher Post</sys:String>
+
+    <sys:String x:Key="ImageNews">ImageNews</sys:String>
+
+    <sys:String x:Key="PlazaPageFootage1">Plaza Powered By CMFL.</sys:String>
+    <sys:String x:Key="PlazaPageFootage2">Some pictures and video materials are from the Internet.</sys:String>
+    <sys:String x:Key="PlazaPageFootage3">Copyright © CraftMineFun</sys:String>
+
+    <sys:String x:Key="LoginRequired">Login Required</sys:String>
+    <sys:String x:Key="LoginRequiredDetail">You must log in to enter the Plaza.</sys:String>
+
+    <!--广场页面-->
+
+    <!--设置页面-->
+
+    <sys:String x:Key="LauncherSettings">Launcher Settings</sys:String>
+
+    <sys:String x:Key="EnableDetailedLauncherLogging">Log Enable</sys:String>
+    <sys:String x:Key="Language">Language</sys:String>
+    <sys:String x:Key="InterfaceFont">UI Font(Restart)</sys:String>
+    <sys:String x:Key="LanguageHint">Select the Language</sys:String>
+    <sys:String x:Key="OpenLogsFolder">Open Logs Folder</sys:String>
+
+
+    <sys:String x:Key="ClientLaunch">Client Launch</sys:String>
+
+    <sys:String x:Key="GameName">Game Name</sys:String>
+    <sys:String x:Key="GameNameHint">Fill in your game name</sys:String>
+
+    <sys:String x:Key="JoinServerAfterLaunch">Join Server at Startup</sys:String>
+    <sys:String x:Key="ServerIP">Fill in your server IP (optional)</sys:String>
+    <sys:String x:Key="ResumeMusic">Restore music after game</sys:String>
+    <sys:String x:Key="AdvanceLaunchSetting">Advance Launch Setting</sys:String>
+    <sys:String x:Key="AdvanceLaunchWarning">Do not modify if you do not know!</sys:String>
+    <sys:String x:Key="EnableCGC">Enable CGC</sys:String>
+
+    <sys:String x:Key="AddParameterManually">Manual input parameters,</sys:String>
+    <sys:String x:Key="AddParameterManuallyHighlight">Each parameter must be followed by a space</sys:String>
+
+    <sys:String x:Key="ParameterInputHint">Enter your parameters, split with spaces</sys:String>
+
+    <sys:String x:Key="ScreenResolution">Screen Resolution</sys:String>
+    <sys:String x:Key="FullScreen">Full Screen</sys:String>
+    <sys:String x:Key="Width">Width</sys:String>
+    <sys:String x:Key="Height">Height</sys:String>
+
+    <sys:String x:Key="ResourceServer">Assets Server</sys:String>
+    <sys:String x:Key="MojangServer">Mojang Server</sys:String>
+    <sys:String x:Key="MojangServerToolTip">Mojang official server, Chinese users may not be able to use it normally, please choose carefully</sys:String>
+    <sys:String x:Key="BMCLServerToolTip">BMCLAPI server, providing acceleration service in China, recommended</sys:String>
+    <sys:String x:Key="AutoSelecterverToolTip">Automatically determine the server, we will automatically assign the server to you according to the test results.</sys:String>
+
+    <sys:String x:Key="Bmclapi">BMCLAPI</sys:String>
+    <sys:String x:Key="EnableBmclapiToolTip">If you are in China, we recommend turning on the acceleration feature for faster download speed,</sys:String>
+    <sys:String x:Key="EnableBmclapiToolTipHighlight">Turn off the function if there is a problem</sys:String>
+
+    <sys:String x:Key="EnableHttpsForBmclapi">Enable HTTPS for BMCLAPI</sys:String>
+    <sys:String x:Key="EnableHttpsForBmclapiToolTip">Using HTTPS can avoid hijacking when using Download Server,</sys:String>
+    <sys:String x:Key="EnableHttpsForBmclapiToolTipHighlight">If there is a problem that cannot be downloaded, please try to turn off the function.</sys:String>
+
+    <sys:String x:Key="DetectServerAutomatic">Auto selection</sys:String>
+    <sys:String x:Key="DetectServerAutomaticToolTip">After using this function, we will automatically determine the download server with the lowest delay.</sys:String>
+
+    <sys:String x:Key="JavaPath">Java Path</sys:String>
+    <sys:String x:Key="JavaPathToolTip">Please make sure the Java path you filled in is correct. If you are not clear, you can click</sys:String>
+    <sys:String x:Key="JavaPathToolTipHighlight">Set the Java button automatically.</sys:String>
+    <sys:String x:Key="SelectJavaHint">Select Java</sys:String>
+
+    <sys:String x:Key="SetJavaAutomatic">Set Java Automatic</sys:String>
+    <sys:String x:Key="DownloadJava">Download Java</sys:String>
+    <sys:String x:Key="DownloadJavaToolTip">Click this button and we will download Java suitable for your system.</sys:String>
+
+    <sys:String x:Key="Browse">Browse</sys:String>
+
+    <sys:String x:Key="CleanMemoryAutomatic">Automatically clean up memory before startup</sys:String>
+    <sys:String x:Key="CleanMemoryNow">Clean up immediately</sys:String>
+    <sys:String x:Key="CleanMemoryToolTip">Transfer idle system physical memory to virtual memory. Please choose carefully when the memory is full, which may lead to more jamming.</sys:String>
+
+    <sys:String x:Key="UISettings">Interface Effect</sys:String>
+
+    <sys:String x:Key="EnableAnimation">Simple Effects</sys:String>
+    <sys:String x:Key="EnableAnimationToolTip">Turn on or off most of the animation effects in the launcher, which will improve part of the performance</sys:String>
+
+    <sys:String x:Key="AnimationFps">Custom Launcher animation FPS (Restart)</sys:String>
+    <sys:String x:Key="AnimationFpsToolTip">When this option is enabled, the program will use your own animation FPS, which is 60fps by default.</sys:String>
+    <sys:String x:Key="AnimationFpsHint">Custom FPS</sys:String>
+
+    <sys:String x:Key="BlurEffect">Blur effect (Restart)</sys:String>
+    <sys:String x:Key="BlurEffectToolTip">This method is suitable for Windows 7 and above operating systems</sys:String>
+
+    <sys:String x:Key="AcrylicEffect">Acrylic effect (Restart,Windows10 Only)</sys:String>
+    <sys:String x:Key="AcrylicEffectToolTip">Method is only applicable to windows 10 machines with operating system</sys:String>
+    <sys:String x:Key="AcrylicEffectHighlight"> version number higher than 17143. X</sys:String>
+
+    <sys:String x:Key="Background">Main Background</sys:String>
+    <sys:String x:Key="BackgroundPath">Background image path</sys:String>
+    <sys:String x:Key="BackgroundToolTip">You need to turn off blur before using pictures as background</sys:String>
+
+    <sys:String x:Key="RandomBackground">Random Wallpaper(Restart)</sys:String>
+    <sys:String x:Key="RandomBackgroundToolTip">Please make sure there are at least 2 pictures in the wallpaper folder</sys:String>
+
+    <sys:String x:Key="BackgroundBlurRadius">Ambiguity</sys:String>
+
+    <sys:String x:Key="AccountSettings">Account</sys:String>
+    <sys:String x:Key="SkinPath">Skin path (optional)</sys:String>
+    <sys:String x:Key="SkinPathHint">Please fill in the picture path of your skin here</sys:String>
+    <sys:String x:Key="CreateNewAccount">New account</sys:String>
+
+    <sys:String x:Key="ServerStatusCheck">Service status detection</sys:String>
+    <sys:String x:Key="ServerStatusCheckDetail">If you can't connect to the Internet, run this feature.</sys:String>
+
+    <sys:String x:Key="DetailedLogging">Log detailed debug information for developers to use</sys:String>
+    <sys:String x:Key="LiteMode">Thin Mode(Restart)</sys:String>
+    <sys:String x:Key="ForceLaunch">Force Launch</sys:String>
+
+    <sys:String x:Key="About">About</sys:String>
+
+    <sys:String x:Key="Cleanup">Cleanup</sys:String>
+    <sys:String x:Key="CleanupToolTip">Clear all profiles before the Launcher</sys:String>
+
+    <sys:String x:Key="Reset">Reset</sys:String>
+    <sys:String x:Key="ResetToolTip">Reset the profile for this Launcher</sys:String>
+
+    <sys:String x:Key="AboutToolTip">About Us</sys:String>
+
+    <sys:String x:Key="Save">Save</sys:String>
+
+    <sys:String x:Key="CreateNewAccountHint">If you want to create an online account, please fill in</sys:String>
+
+    <sys:String x:Key="AuthLib">Authlib authentication server (optional)</sys:String>
+    <sys:String x:Key="AuthLibHint">Authlib authentication server address</sys:String>
+
+    <sys:String x:Key="DonateAndSupport">Donate</sys:String>
+    <sys:String x:Key="DonateBadge">Come and have a look!</sys:String>
+    <sys:String x:Key="DonateToolTip">Boss, come and have a look! We need your support!!</sys:String>
+
+    <!--设置页面-->
+
+    <!--赞助页面-->
+
+    <sys:String x:Key="DonateReason">First of all, thank you for your long-term support and company to CMFL. After numerous version iterations, CMFL has become more and more stable and perfect. We have also purchased expensive equipment and services to ensure the service integrity and stability of the Launcher. But along with the high maintenance cost, it will become more and more difficult to support the whole system by ourselves. Therefore, we need the support of users and fans to provide better services. At the same time, thank all CMFL users for their long-term support!</sys:String>
+
+    <sys:String x:Key="CostDetail">Overhead details:</sys:String>
+    <sys:String x:Key="CostDetail1">+ Port mapping = 70 CNY/Month</sys:String>
+    <sys:String x:Key="CostDetail2">+ Server acquisition cost = 80 CNY/Month</sys:String>
+    <sys:String x:Key="CostDetail3">+ Other expenses = 40 CNY/Month</sys:String>
+    <sys:String x:Key="CostDetail4">=> Total = 190 CNY/Month</sys:String>
+
+    <sys:String x:Key="DonateMethods">DonateMethods:</sys:String>
+    <sys:String x:Key="UseAfd">Use LoveGeneration</sys:String>
+
+
+    <!--赞助页面-->
+
+    <!--关于页面-->
+
+    <sys:String x:Key="AboutTitle">Developer List</sys:String>
+
+    <sys:String x:Key="GroupMembers">Group Members:llr,Leon,CodingEric</sys:String>
+    <sys:String x:Key="UI">UI:llr</sys:String>
+    <sys:String x:Key="LauncherCore">Core:llr,CodingEric</sys:String>
+    <sys:String x:Key="LauncherSupportPackage">Support Package:Leon</sys:String>
+    <sys:String x:Key="Backend">Backend:CodingEric</sys:String>
+    <sys:String x:Key="Support">Support:LilyHouseMan,XiaoJiang</sys:String>
+    <sys:String x:Key="API">API:Srar</sys:String>
+    <sys:String x:Key="Donate">Donate:XingXing, YingXi</sys:String>
+
+    <sys:String x:Key="OpenSourceProjectUsageTitle">Open Source Projects:</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage1">ProjBobcat</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage2">Mahapps</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage3">MaterialDesignInXamlToolkit</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage4">AcrylicWPF</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage5">MVVMLight</sys:String>
+    <sys:String x:Key="OpenSourceProjectUsage6">LiveChart</sys:String>
+
+    <sys:String x:Key="MoreTitle">More</sys:String>
+    <sys:String x:Key="More1">Some pictures are from Mojang and Pixiv.</sys:String>
+    <sys:String x:Key="More2">Video interface from Biliplus</sys:String>
+    <sys:String x:Key="More3">Starter music from the Internet</sys:String>
+    <sys:String x:Key="More4">BMCLAPI By BangBang93</sys:String>
+
+    <!--关于页面-->
+
+    <!--异常处理页面-->
+
+    <sys:String x:Key="ExceptionPageTitle">Crash!</sys:String>
+
+    <sys:String x:Key="ExceptionDetail">This is more about this crash</sys:String>
+    <sys:String x:Key="GotIt">Got it!</sys:String>
+
+    <!--异常处理页面-->
+
+    <!--游戏崩溃处理页面-->
+
+    <sys:String x:Key="GameLaunchErrorPageTitle">Game Crash Handling System</sys:String>
+
+    <!--游戏崩溃处理页面-->
+
+    <!--更新完成页面-->
+
+    <sys:String x:Key="UpgradeComplete">Update completed</sys:String>
+    <sys:String x:Key="UpgradeCompleteDetail">Restart to complete the update</sys:String>
+
+    <!--更新完成页面-->
+
+    <!--更新页面-->
+
+    <sys:String x:Key="UpgradePageTitle">Discover new updates!</sys:String>
+    <sys:String x:Key="UpgradeDetail">Here are the contents of this update</sys:String>
+
+    <sys:String x:Key="UpgradeDialogText1">Ohhhh!</sys:String>
+    <sys:String x:Key="UpgradeDialogText2">You need to know these precautions before you update.</sys:String>
+
+    <sys:String x:Key="UpgradeTip">You just need to click the download button again to start downloading.</sys:String>
+
+    <sys:String x:Key="CreateShortcut">Create a shortcut to the launcher on the desktop</sys:String>
+
+    <!--更新页面-->
+
+    <!--游戏环境检测页面-->
+
+    <sys:String x:Key="GameEnvCheckTitle">Game environment detection service</sys:String>
+
+    <sys:String x:Key="GameEnvCheckResult">The test results are as follows</sys:String>
+
+    <sys:String x:Key="LetMeThink">Let me see...</sys:String>
+
+    <!--游戏环境检测页面-->
+
+    <!--账户管理控件-->
+
+    <sys:String x:Key="PleaseWait">Please wait a moment</sys:String>
+    <sys:String x:Key="Getting">Being acquired</sys:String>
+    <sys:String x:Key="UUIDTip">Move the mouse over the UUID to see the full UUID</sys:String>
+
+    <sys:String x:Key="UseAccount">Use</sys:String>
+    <sys:String x:Key="DeleteAccount">Delete</sys:String>
+
+    <!--账户管理控件-->
+
+    <!--公告控件-->
+
+    <sys:String x:Key="AnnounceWaiting">Requesting announcement information from server......</sys:String>
+
+    <!--公告控件-->
+
+    <!--游戏时长记录控件-->
+
+    <sys:String x:Key="LoggedGameTime">Recorded game duration</sys:String>
+    <sys:String x:Key="LoggedGameTimeDetail">(Differentiated version)</sys:String>
+
+    <sys:String x:Key="TotalLoggedGameTime">Total recorded game hours</sys:String>
+
+    <!--游戏时长记录控件-->
+
+    <!--系统性能控件-->
+
+    <sys:String x:Key="SystemMonitorTitle">System performance monitor</sys:String>
+    <sys:String x:Key="SystemMonitorDetail">(Memory footprint)</sys:String>
+
+    <!--系统性能控件-->
+
+    <!-- 反馈页面-->
+    <sys:String x:Key="FeedBackPageTitle">FAQ</sys:String>
+    <sys:String x:Key="NewFeedBack">New feedback</sys:String>
+    <sys:String x:Key="SentFeedBack">Feedback sent</sys:String>
+    <sys:String x:Key="DeveloperReply">Developer feedback</sys:String>
+    <!-- 反馈页面-->
+
+    <!-- 游戏异常类-->
+    <sys:String x:Key="GameNotFound">No games found</sys:String>
+    <!-- 游戏异常类-->
+
+    <!-- 游戏启动类-->
+    <sys:String x:Key="Start">Start</sys:String>
+    <sys:String x:Key="McHasCrashedSeeLogs">Minecraft has crashed. See the log for details.</sys:String>
+
+    <sys:String x:Key="McCrashed">Game breakdown</sys:String>
+    <sys:String x:Key="McCrashed2">Unexpected game crash</sys:String>
+
+    <sys:String x:Key="McExited">Game exited</sys:String>
+    <sys:String x:Key="McExited2">We have detected that you have quit the game</sys:String>
+
+    <sys:String x:Key="StartingGameUseList">Start game from list</sys:String>
+
+    <sys:String x:Key="RegisterGameExitEvent">Start game from list</sys:String>
+    <sys:String x:Key="RegisterGameLogEvent">Start game from list</sys:String>
+
+    <sys:String x:Key="GameLaunchLog">Game Launch Log</sys:String>
+
+    <sys:String x:Key="CrashSolution1">Recommended solutions:There is a problem with the authentication server. You can try to log in using the genuine mode later.</sys:String>
+    <sys:String x:Key="CrashSolution2">Recommended solutions:Please check whether your Java is damaged. You can click the get Java button in the launcher to get the latest Java installer.</sys:String>
+    <sys:String x:Key="CrashSolution3">Recommended solutions:Please check if your game file is damaged</sys:String>
+    <sys:String x:Key="CrashSolution4">Recommended solutions:Contact developer</sys:String>
+
+    <sys:String x:Key="UnknownError">Unknown Error</sys:String>
+
+    <sys:String x:Key="ResourcesPackLoadFailed">Failed to read package information</sys:String>
+
+    <sys:String x:Key="ResourcesPackLoadFailedReason1">Reason:Parameter error, default picture will be used</sys:String>
+    <sys:String x:Key="ResourcesPackLoadFailedReason2">Reason:Decompression failed, default picture will be used</sys:String>
+
+    <sys:String x:Key="StartingGenerateLaunchList">Starting Generate Launch List</sys:String>
+    <sys:String x:Key="ConfigureList">Configure List</sys:String>
+
+    <sys:String x:Key="GameVersion">Game Version</sys:String>
+    <sys:String x:Key="OnlineMode">Online Mode</sys:String>
+
+    <sys:String x:Key="True">True</sys:String>
+    <sys:String x:Key="False">False</sys:String>
+
+    <sys:String x:Key="MaxMem">Maximum memory</sys:String>
+    <sys:String x:Key="MinMem">Minimum memory</sys:String>
+
+    <sys:String x:Key="GetAdvanceArgumentsFailed">Failed to get advanced startup parameters!</sys:String>
+
+    <sys:String x:Key="UsingAuthlibWarning">Check that you use the third-party authentication server, and start to get the latest version of authlib injector from the bmcl API source.</sys:String>
+    <sys:String x:Key="StartDownloadAuthlibBuildJson">Start downloading authlib to build JSON</sys:String>
+    <sys:String x:Key="StartDownloadAuthlibBuild">Start downloading authlib build</sys:String>
+
+    <sys:String x:Key="DownloadAuthlibBuildSuccess">Build and download of authlib succeeded</sys:String>
+    <sys:String x:Key="DownloadAuthlibBuildFailed">Authlib build download failed!</sys:String>
+
+    <sys:String x:Key="GetUuidFailed">Failed to get UUID</sys:String>
+    <sys:String x:Key="ApiLimitsReason">Possible cause is API request limit, please try again in a minute</sys:String>
+
+    <sys:String x:Key="GetSkinFailed">Failed to get Skin and Cape</sys:String>
+
+    <sys:String x:Key="ArgumentCanNotBeNull">Parameter cannot be empty!</sys:String>
+    <sys:String x:Key="ArgumentNotCorrect">Incorrect parameter!</sys:String>
+    <sys:String x:Key="GDIVersionNotCorrect">Unsupported GDI + version, must be GDI + 1.1 and above, and the operating system requires win Vista and later.</sys:String>
+
+    <sys:String x:Key="FoundLauncherConfigureFile">Discover Launcher settings, start loading configuration</sys:String>
+    <sys:String x:Key="NotFoundLauncherConfigureFile">No profile detected, start initialization step</sys:String>
+
+    <sys:String x:Key="LauncherConfigureFileLoaded">Configuration JSON loaded successfully</sys:String>
+    <sys:String x:Key="LauncherConfigureFileLoadingFailed">Failed to configure JSON to load!</sys:String>
+
+    <sys:String x:Key="LauncherConfigureFileInitialized">Configuration file initialization complete</sys:String>
+
+    <sys:String x:Key="DefaultPath">Default Path</sys:String>
+    <sys:String x:Key="PleaseCheckLog">Please Check Log</sys:String>
+
+    <!-- 游戏启动类-->
+
+    <!-- Socket类-->
+
+    <sys:String x:Key="ConnectingToServer">Establish a connection with the primary server...</sys:String>
+    <sys:String x:Key="ConnectedToServer">Successfully connected to CMFL server main frame, current delay:</sys:String>
+    <sys:String x:Key="FailedConnectToServer">Unable to connect to socket backend...</sys:String>
+    <sys:String x:Key="FailedConnectToServerDisposed">Unable to connect to the socket backend, Reason: the socket object has been released</sys:String>
+
+    <!-- Socket类-->
+
+    <!-- 气泡彩蛋类-->
+    <!-- 该部分可以随意修改,但是需要注意的是,在下方的"ToolTipEasterEggCount"字段中,请确保该字段的值等于小贴士总数！-->
+    <!-- 如果要添加新的小贴士,请严格按照该命名规则:ToolTipEasterEgg{序号},例如:ToolTipEasterEgg15.-->
+    <sys:String x:Key="ToolTipEasterEggCount">17</sys:String>
+
+    <sys:String x:Key="ToolTipEasterEgg1">Ask your doctor!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg2">As seen on TV!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg3">Any computer is a laptop if you're brave enough!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg4">An illusion! What are you hiding?</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg5">"Almost never" is an interesting concept!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg6">All inclusive!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg7">Ahhhhhh!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg8">90% bug free!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg9">20 GOTO 10!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg10">All rumors are true!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg11">Absolutely no memes!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg12">12345 is a bad password!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg13">1% sugar!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg14">	OHHHHH IS YOU!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg15">...!</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg16">Tip: \" 3 → 30 \"</sys:String>
+    <sys:String x:Key="ToolTipEasterEgg17">	150 bpm for 400000 minutes!</sys:String>
+    <!-- 气泡彩蛋类-->
+
+    <!-- 启动器帮助类-->
+    <sys:String x:Key="StartingGetBgm">Start getting BGM from server</sys:String>
+
+    <sys:String x:Key="FeedBackTag1">Writing suggestions</sys:String>
+    <sys:String x:Key="FeedBackTag2">BUG feedback</sys:String>
+    <sys:String x:Key="FeedBackTag3">Problem</sys:String>
+    <sys:String x:Key="FeedBackTag4">Waiting for administrator's reply</sys:String>
+    <sys:String x:Key="FeedBackTag5">Need more information</sys:String>
+    <sys:String x:Key="FeedBackTag6">Closed</sys:String>
+
+    <sys:String x:Key="Day">Day(s)</sys:String>
+    <sys:String x:Key="Hours">Hour(s)</sys:String>
+    <sys:String x:Key="Minutes">Minute(s)</sys:String>
+    <sys:String x:Key="Seconds">Second(s)</sys:String>
+
+    <!-- 请在翻译以下字段时保留"|"符号！-->
+    <sys:String x:Key="EnvProblem1">You use the agent. If you use the agent software to forward your system traffic, you may be banned when you use the genuine account to join the server!</sys:String>
+    <sys:String x:Key="EnvProblem2">No account information | please go to settings to add a new account!</sys:String>
+    <sys:String x:Key="EnvProblem3">You may have used the green version of java| we suspect that you have used the green version of Java, which may cause many problems.</sys:String>
+    <sys:String x:Key="EnvProblem4">You can optimize the performance | we found that your operating system is 64 bit, using 64 bit Java can improve the smoothness of the game.</sys:String>
+    <sys:String x:Key="EnvProblem5">Memory less than 512mb| warning! The memory you set is less than 512MB, you may encounter various problems in the game.</sys:String>
+
+    <sys:String x:Key="LauncherShortCut">CMFL Shortcut</sys:String>
+    <!-- 启动器帮助类-->
+
+    <!-- 日志记录类-->
+    <sys:String x:Key="Normal">Normal</sys:String>
+    <sys:String x:Key="Info">Info</sys:String>
+    <sys:String x:Key="Warning">Warning</sys:String>
+    <sys:String x:Key="Error">Error</sys:String>
+
+    <sys:String x:Key="LauncherName">CMFL Launcher</sys:String>
+
+    <sys:String x:Key="WriteLogFileFailedReason1">Failed to write Launcher log! Parameter exception!!</sys:String>
+    <sys:String x:Key="WriteLogFileFailedReason2">Failed to write Launcher log! Please check whether the directory is readable and writable!!</sys:String>
+    <sys:String x:Key="WriteLogFileFailedReason3">Failed to write Launcher log! Security error!!</sys:String>
+    <!-- 日志记录类-->
+
+    <!-- 通知类-->
+    <sys:String x:Key="TrayIconName">CraftMineFun - A Minecraft Launcher.</sys:String>
+    <!-- 通知类-->
+
+    <!-- 小贴士类-->
+    <!-- 该部分可以随意修改,但是需要注意的是,在下方的"TipsCount"字段中,请确保该字段的值等于小贴士总数！-->
+    <!-- 如果要添加新的小贴士,请严格按照该命名规则:Tips{小贴士序号},例如:Tips20.-->
+    <sys:String x:Key="TipsCount">22</sys:String>
+
+    <sys:String x:Key="Tips">Tips</sys:String>
+
+    <sys:String x:Key="Tips1">As seen on teletext!</sys:String>
+    <sys:String x:Key="Tips2">From country that brought you Ace of Base!</sys:String>
+    <sys:String x:Key="Tips3">Square Of Life!</sys:String>
+    <sys:String x:Key="Tips4">Over 50mph!</sys:String>
+    <sys:String x:Key="Tips5">Creepy babies! Highly collectable!</sys:String>
+    <sys:String x:Key="Tips6">As seen on the World-Wide Web!</sys:String>
+    <sys:String x:Key="Tips7">Degauss your CRT now!</sys:String>
+    <sys:String x:Key="Tips8">By the power of Grayskull!</sys:String>
+    <sys:String x:Key="Tips9">Woo, third place</sys:String>
+    <sys:String x:Key="Tips10">Serious Doom competitor!</sys:String>
+    <sys:String x:Key="Tips11">"LINUX is obsolete"!</sys:String>
+    <sys:String x:Key="Tips12">Program MineCraft;</sys:String>
+    <sys:String x:Key="Tips13">Available on most BBSes!</sys:String>
+    <sys:String x:Key="Tips14">Photo realistic!</sys:String>
+    <sys:String x:Key="Tips15">Hand painted!</sys:String>
+    <sys:String x:Key="Tips16">1K in 24h!</sys:String>
+    <sys:String x:Key="Tips17">	Glowing creepy eyes!</sys:String>
+    <sys:String x:Key="Tips18">	Less polygons!</sys:String>
+    <sys:String x:Key="Tips19">Cubism!</sys:String>
+    <sys:String x:Key="Tips20">0xffff-1 chunks</sys:String>
+    <sys:String x:Key="Tips21">Finally complete!</sys:String>
+    <sys:String x:Key="Tips22">Hellow World!</sys:String>
+    <!-- 小贴士类-->
+
+    <!-- Socket类-->
+    <sys:String x:Key="SocketSendDataFailed">There was a problem sending data to the server</sys:String>
+    <sys:String x:Key="SocketDisposeFailed">Socket Dispose Failed,Error code:</sys:String>
+    <!-- Socket类-->
+
+    <!-- 账户信息卡片逻辑-->
+    <sys:String x:Key="AlreadyAuth">AlreadyAuth</sys:String>
+    <sys:String x:Key="Auth">Auth</sys:String>
+    <sys:String x:Key="Earlier">Earlier</sys:String>
+    <sys:String x:Key="None">None</sys:String>
+    <sys:String x:Key="OfflineMode">Offline Mode</sys:String>
+    <sys:String x:Key="BecomingYourLoginAccount">Will be used as your login account!</sys:String>
+    <sys:String x:Key="AccountDeleted">Deleted, please restart the Launcher</sys:String>
+    <!-- 账户信息卡片逻辑-->
+
+    <!-- 公告板逻辑-->
+    <sys:String x:Key="UsingCachedBulletin">There may be a problem with the CMFL server and the Launcher announcement has been loaded from the cache.</sys:String>
+    <sys:String x:Key="GetBulletinFailed">Unable to get announcement</sys:String>
+    <!-- 公告板逻辑-->
+
+    <!-- 视频播放器逻辑-->
+    <sys:String x:Key="VideoCoverNotFound">No video map found, default image will be used!</sys:String>
+    <sys:String x:Key="LoadingVideo">Loading video</sys:String>
+    <sys:String x:Key="ClickToLoadVideo">Click to load video</sys:String>
+
+    <sys:String x:Key="LoadVideoFailedReason">Error loading video, Reason:</sys:String>
+    <!-- 视频播放器逻辑-->
+
+    <!-- 错误类型-->
+    <sys:String x:Key="UnknownOperation">Unknown Operation</sys:String>
+    <sys:String x:Key="IllegalUrl">Illegal Url</sys:String>
+    <sys:String x:Key="FileNotFound">File Not Found</sys:String>
+    <!-- 错误类型-->
+
+    <!-- Forge构建数据模型-->
+    <sys:String x:Key="Decompress">Decompress</sys:String>
+    <sys:String x:Key="MovingFiles">Moving Files</sys:String>
+
+    <sys:String x:Key="InstallForge">Install Forge</sys:String>
+
+    <sys:String x:Key="Download">Download</sys:String>
+    <!-- Forge构建数据模型-->
+
+    <!-- 游戏信息数据模型-->
+    <sys:String x:Key="OpenScreenShotFailedReason">Unable to open screenshot, Reason:</sys:String>
+    <sys:String x:Key="Open">Open</sys:String>
+    <sys:String x:Key="OpenVersionFolderFailed">Cannot open version folder</sys:String>
+    <!-- 游戏信息数据模型-->
+
+    <!-- MCBBS新闻数据模型-->
+    <sys:String x:Key="Access">Visit</sys:String>
+    <!-- MCBBS新闻数据模型-->
+
+    <!-- 关于页面VM-->
+    <sys:String x:Key="AllRightReserved">All Right Reserved</sys:String>
+    <sys:String x:Key="FoundationTimeText">Thank you for your support and company!</sys:String>
+    <!-- 关于页面VM-->
+
+    <!-- 崩溃页面VM-->
+    <sys:String x:Key="SystemVersion">System version</sys:String>
+    <!-- 崩溃页面VM-->
+
+    <!-- 反馈页面VM-->
+    <sys:String x:Key="LoadFeedBackFailed">Unable to load feedback</sys:String>
+    <!-- 反馈页面VM-->
+
+    <!-- 游戏错误页面VM-->
+    <sys:String x:Key="LaunchGame">Launch Game</sys:String>
+    <!--WE ARE GO FOR LAUNCH NOW!-->
+    <!-- 游戏错误页面VM-->
+
+    <!-- 游戏列表页面VM-->
+    <sys:String x:Key="RefreshGameList">Refresh Game List</sys:String>
+
+    <sys:String x:Key="StartGetting">Start Getting</sys:String>
+    <sys:String x:Key="GetSuccessful">Get Successful</sys:String>
+    <sys:String x:Key="GetFailed">Get Failed</sys:String>
+
+    <sys:String x:Key="TryAgainLater">Please try again later</sys:String>
+
+    <sys:String x:Key="Snapshot">Snapshot</sys:String>
+    <sys:String x:Key="SnapshotSuggestion">Recommended for early adopters</sys:String>
+
+    <sys:String x:Key="Release">Release</sys:String>
+    <sys:String x:Key="ReleaseSuggestion">Recommend</sys:String>
+
+    <sys:String x:Key="OldBeta">Old Beta</sys:String>
+    <sys:String x:Key="OldBetaSuggestion">Unknown property, try it yourself</sys:String>
+
+    <sys:String x:Key="OldAlpha">Old Alpha</sys:String>
+    <sys:String x:Key="OldAlphaSuggestion">Ancient Version</sys:String>
+    <!-- 游戏列表页面VM-->
+
+    <!-- 游戏时长控件VM-->
+    <sys:String x:Key="Duration">Duration</sys:String>
+    <!-- 游戏时长控件VM-->
+
+    <!-- 主页面VM-->
+    <sys:String x:Key="Connecting">Connecting</sys:String>
+    <sys:String x:Key="ResetSucceeded">Reset Succeeded</sys:String>
+    <sys:String x:Key="AudioFile">Audio File</sys:String>
+    <sys:String x:Key="McbbsNews">News</sys:String>
+    <!-- 主页面VM-->
+
+    <!-- 向导页2VM-->
+    <sys:String x:Key="PleaseInputUserName">Please Input UserName</sys:String>
+    <sys:String x:Key="InfoCanNotBeEmpty">Information cannot be empty</sys:String>
+    <sys:String x:Key="InputError">Input error</sys:String>
+    <sys:String x:Key="StartVerifying">Start validation...</sys:String>
+    <sys:String x:Key="Verify">Verification</sys:String>
+
+    <sys:String x:Key="EncryptFailed">Encryption failed</sys:String>
+    <!-- 向导页2VM-->
+
+    <!-- 向导页3VM-->
+    <sys:String x:Key="AutoMemory">Auto set memory</sys:String>
+    <sys:String x:Key="AutoMemoryFailedDetail">Our automatic memory algorithm may blow up. Please use manual instead.</sys:String>
+    <!-- 向导页3VM-->
+
+    <!-- 精简模式窗口VM-->
+    <sys:String x:Key="AvailableMemory">Available memory</sys:String>
+    <sys:String x:Key="ExitLiteModeSucceeded">Successfully closed LiteMode mode</sys:String>
+    <sys:String x:Key="PleaseRebootLauncher">Please restart the Launcher</sys:String>
+    <sys:String x:Key="PleaseSelectGameFirst">Please select a game first</sys:String>
+
+    <sys:String x:Key="GameIsRunning">Game running</sys:String>
+    <!-- 精简模式窗口VM-->
+
+    <!-- 主窗口VM-->
+    <sys:String x:Key="PleaseFinishFirstConfigure">Please complete the first setup first</sys:String>
+    <sys:String x:Key="Wait">Wait</sys:String>
+
+    <sys:String x:Key="Avatar">Avatar</sys:String>
+    <sys:String x:Key="AvatarSizeNotCorrectWarning">Your picture is inconsistent in length and width, we have stretched it Σ( ° △ °||)</sys:String>
+    <sys:String x:Key="AvatarModify">Avatar modification</sys:String>
+    <sys:String x:Key="Progress">Progress</sys:String>
+    <sys:String x:Key="StartGettingBestServer">Start getting the fastest download server</sys:String>
+    <sys:String x:Key="RequestAddress">Request address</sys:String>
+    <sys:String x:Key="Completion">Completion</sys:String>
+    <sys:String x:Key="UpdateCheck">Update inspection</sys:String>
+    <sys:String x:Key="PleaseUpdateLauncher">Please update the Launcher</sys:String>
+    <sys:String x:Key="No">No</sys:String>
+    <sys:String x:Key="AlreadyLoggedIn">Already logged in</sys:String>
+    <sys:String x:Key="ClickMeToSwitchAccount">Click me to switch accounts</sys:String>
+    <!-- 主窗口VM-->
+
+    <!-- 设置页面VM-->
+    <sys:String x:Key="StartCheck">Start Check</sys:String>
+    <sys:String x:Key="CleanupCompleted">Cleanup Completed</sys:String>
+    <sys:String x:Key="Memory">Memory</sys:String>
+    <sys:String x:Key="CopyBackgroundImage">Copy Background Image</sys:String>
+    <sys:String x:Key="ChangeBackground">Change Background</sys:String>
+    <sys:String x:Key="Succeeded">Succeeded</sys:String>
+    <sys:String x:Key="Failed">Failed</sys:String>
+    <sys:String x:Key="StartSavingLauncherSettings">Start Saving Launcher Settings</sys:String>
+    <sys:String x:Key="JavaVm">JavaVM</sys:String>
+    <sys:String x:Key="NotSelectJava">Not Select Java</sys:String>
+    <sys:String x:Key="NotSelectJavaWarning">We have noticed that you have not selected Java or have not installed Java. If you need to install Java, under the "client startup" tab, click the get Java button to download!</sys:String>
+    <sys:String x:Key="EnableBmclApi">Enable BMCLAPI</sys:String>
+    <sys:String x:Key="SelectBothBlurTypeWarning">Do not select both blur options at the same time!!!!!</sys:String>
+    <sys:String x:Key="PleaseCheckAllSettings">Please check all your settings</sys:String>
+    <sys:String x:Key="SearchJava">Search Java</sys:String>
+    <sys:String x:Key="FoundJavasHint">More than one Java has been found, please pull down to view!</sys:String>
+    <sys:String x:Key="NoJavaFoundHint">The launcher did not find Java. You can download Java in the settings interface!</sys:String>
+    <sys:String x:Key="ServerConnectionTest">Server connection test</sys:String>
+    <!-- 设置页面VM-->
+
+    <!-- 程序入口点-->
+    <sys:String x:Key="SettingsLoaded">Settings Loaded</sys:String>
+    <sys:String x:Key="DoNotOpenTwoLauncher">Ssssssssss..Do not open multiple processes!!</sys:String>
+    <sys:String x:Key="InitializationStarted">Initialization Started</sys:String>
+    <sys:String x:Key="ExceptionHandlerInitialized">Exception Handler Initialized</sys:String>
+    <sys:String x:Key="DispatcherInitialized">Dispatcher Initialized</sys:String>
+    <sys:String x:Key="GcInitialized">GC Initialized</sys:String>
+    <sys:String x:Key="UiSettingsInitialized">UI Settings Initialized</sys:String>
+    <!-- 程序入口点-->
+
+    <!-- 异常处理信息-->
+    <sys:String x:Key="UnhandledExceptionCaught">Unhandled exception caught</sys:String>
+    <sys:String x:Key="ExceptionInfo">Abnormal information</sys:String>
+    <sys:String x:Key="ExceptionStack">Abnormal stack</sys:String>
+    <sys:String x:Key="ClrExiting">CLR is about to exit</sys:String>
+    <sys:String x:Key="InnerErrorHappened">Error</sys:String>
+    <!-- 异常处理信息-->
+</ResourceDictionary>

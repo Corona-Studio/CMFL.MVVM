@@ -1,0 +1,69 @@
+﻿<Page x:Class="CMFL.MVVM.Views.GameErrorPage"
+      Foreground="{DynamicResource SystemGray6}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" DataContext="{Binding GameErrorPageViewModel,Source={StaticResource Locator}}"
+      d:DesignHeight="518" d:DesignWidth="730">
+    <Grid ClipToBounds="True" Background="{StaticResource SystemOpacityWhite3}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140*" />
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="390*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="{DynamicResource SystemRed1}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="111*" />
+                <ColumnDefinition Width="97*" />
+                <ColumnDefinition Width="411*" />
+            </Grid.ColumnDefinitions>
+            <materialDesign:PackIcon Margin="15" Kind="Ambulance" Grid.Column="1" Width="Auto" Height="Auto"
+                                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Run Text="CraftMineFun" FontSize="36" />
+                <Run Text="{DynamicResource GameErrorProcessor}" />
+            </TextBlock>
+        </Grid>
+        <TextBlock Grid.Row="1" Text="{Binding JavaPath}" Padding="10" />
+        <TextBlock Grid.Row="2" Text="{Binding GameId}" Padding="10" />
+        <TextBlock Grid.Row="3" Text="{Binding ChoseGame}" Padding="10" />
+        <Grid Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="23*" />
+                <RowDefinition Height="138*" />
+                <RowDefinition Height="30*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="47*" />
+                    <ColumnDefinition Width="572*" />
+                </Grid.ColumnDefinitions>
+                <materialDesign:PackIcon Margin="8" Kind="CommentText" HorizontalAlignment="Stretch"
+                                         VerticalAlignment="Stretch" Grid.Column="0" Width="Auto" Height="Auto" />
+                <TextBlock VerticalAlignment="Center" Padding="5" Grid.Column="1" HorizontalAlignment="Left"
+                           Text="{DynamicResource ExceptionDetail}" />
+            </Grid>
+            <ScrollViewer Margin="10" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <TextBlock Background="{DynamicResource SystemBlack1}" Padding="10" TextWrapping="Wrap"
+                           Text="{Binding ErrorText}" />
+            </ScrollViewer>
+            <Button Grid.Row="2" Background="{DynamicResource SystemYellow1}"
+                    BorderBrush="{DynamicResource SystemYellow1}"
+                    Command="{Binding Close}" Height="Auto">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="CheckboxMarkedCircleOutline" Padding="5"
+                                             HorizontalAlignment="Center" VerticalAlignment="Center" Width="25"
+                                             Height="25" Foreground="{DynamicResource PrimaryLabelColor}" />
+                    <TextBlock Padding="5" VerticalAlignment="Center" HorizontalAlignment="Center"
+                               Text="{DynamicResource GotIt}" Foreground="{DynamicResource PrimaryLabelColor}" />
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
